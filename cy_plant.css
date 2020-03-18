@@ -1,0 +1,227 @@
+body {
+  margin: 0;
+  list-style: none;
+  font-family: "CWTEXFANGSONG";
+}
+
+body header {
+  padding: 0 5%;
+}
+
+body header ul {
+  padding: 10px;
+}
+
+body header ul .nav-item:nth-child(1) {
+  position: relative;
+}
+
+body header ul .nav-item:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: -10px;
+  top: 10px;
+  background-image: url(./img/icon/lock.svg);
+}
+
+body header ul .nav-item:nth-child(2) {
+  position: relative;
+}
+
+body header ul .nav-item:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: -10px;
+  top: 10px;
+  background-image: url(./img/icon/user.svg);
+}
+
+body header ul .nav-item:nth-child(3) {
+  position: relative;
+}
+
+body header ul .nav-item:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: -10px;
+  top: 10px;
+  background-image: url(./img/icon/heart.svg);
+}
+
+body header ul .nav-item:nth-child(4) {
+  position: relative;
+}
+
+body header ul .nav-item:nth-child(4)::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: -10px;
+  top: 10px;
+  background-image: url(./img/icon/shopping-cart.svg);
+}
+
+body .cy_logo {
+  padding: 5% 0 10%;
+  width: 100%;
+}
+
+body .container_first {
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+}
+
+body .container_first .list_left {
+  position: absolute;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  font-size: 30px;
+  left: 25%;
+  top: -20%;
+}
+
+@media (max-width: 1440px) {
+  body .container_first .list_left {
+    font-size: 26px;
+    left: 25%;
+    top: -12%;
+  }
+}
+
+@media (max-width: 1024px) {
+  body .container_first .list_left {
+    font-size: 22px;
+    left: 22%;
+    top: -15%;
+  }
+}
+
+@media (max-width: 768px) {
+  body .container_first .list_left {
+    font-size: 18px;
+    left: 25%;
+    top: -12%;
+  }
+}
+
+body .container_first .gray_area {
+  width: 70%;
+  height: 45vh;
+  background-color: #b8c6d1;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+body .container_first .gray_area .plant_logo {
+  width: 50px;
+}
+
+body .calendar_container {
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5% 0;
+}
+
+body .calendar_container img {
+  width: 100%;
+}
+
+body .calendar_container .design_concept {
+  width: 50%;
+  height: 100%;
+  padding: 5%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #d7d7d7;
+}
+
+body .calendar_container .design_concept img {
+  padding: 10% 25%;
+}
+
+body .calendar_container .design_concept h3 {
+  padding: 10% 5%;
+  font-size: 50px;
+}
+
+@media (max-width: 1440px) {
+  body .calendar_container .design_concept h3 {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 1024px) {
+  body .calendar_container .design_concept h3 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  body .calendar_container .design_concept h3 {
+    font-size: 35px;
+  }
+}
+
+body .calendar_container .design_concept p {
+  font-size: 30px;
+}
+
+@media (max-width: 1440px) {
+  body .calendar_container .design_concept p {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 1024px) {
+  body .calendar_container .design_concept p {
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 980px) {
+  body .calendar_container .design_concept p {
+    font-size: 20px;
+  }
+}
+
+body .sec_container {
+  padding: 30% 0 0;
+  position: relative;
+}
+
+body .sec_container .sec_position_btm {
+  width: 80%;
+  height: 60%;
+  background-color: #bec3cc;
+  position: absolute;
+  top: 10%;
+}
+
+body .sec_container .sec_background {
+  width: 100%;
+  height: 50vh;
+  background-color: #e3e4e8;
+}
+/*# sourceMappingURL=cy_plant.css.map */
