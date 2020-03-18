@@ -19,7 +19,7 @@ body .cid-rTpW4eKEc3 .mbr-figure .banner_plant {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background-image: url(./assets/images/環境01.jpg);
+  background-image: url(../img/環境01.jpg);
   background-size: cover;
   background-position: center;
   -webkit-transition: 2s;
@@ -38,7 +38,7 @@ body .cid-rTpW4eKEc3 .mbr-figure .banner_restaurant {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background-image: url(./assets/images/環境03.jpg);
+  background-image: url(../img/環境02.jpg);
   background-size: cover;
   background-position: center;
   -webkit-transition: 2s;

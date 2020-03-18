@@ -212,7 +212,7 @@ body .sec_container {
 
 body .sec_container .sec_background_top {
   width: 100%;
-  height: 60vh;
+  height: 30vh;
   background-color: white;
 }
 
@@ -235,46 +235,11 @@ body .sec_container .sec_position_btm .sec_position_top {
   background-color: white;
   position: absolute;
   right: 0;
-  -webkit-transform: translate(50%, 55%);
-          transform: translate(50%, 55%);
+  -webkit-transform: translate(50%, 25%);
+          transform: translate(50%, 25%);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-@media (max-width: 1140px) {
-  body .sec_container .sec_position_btm .sec_position_top {
-    -webkit-transform: translate(50%, 70%);
-            transform: translate(50%, 70%);
-  }
-}
-
-@media (max-width: 1040px) {
-  body .sec_container .sec_position_btm .sec_position_top {
-    -webkit-transform: translate(50%, 80%);
-            transform: translate(50%, 80%);
-  }
-}
-
-@media (max-width: 960px) {
-  body .sec_container .sec_position_btm .sec_position_top {
-    -webkit-transform: translate(50%, 105%);
-            transform: translate(50%, 105%);
-  }
-}
-
-@media (max-width: 840px) {
-  body .sec_container .sec_position_btm .sec_position_top {
-    -webkit-transform: translate(50%, 120%);
-            transform: translate(50%, 120%);
-  }
-}
-
-@media (max-width: 785px) {
-  body .sec_container .sec_position_btm .sec_position_top {
-    -webkit-transform: translate(50%, 135%);
-            transform: translate(50%, 135%);
-  }
 }
 
 body .sec_container .sec_position_btm .sec_position_top .sec_position_top_title {
@@ -306,7 +271,7 @@ body .sec_container .sec_position_btm .sec_position_top .sec_position_top_conten
 
 body .sec_container .sec_background_btm {
   width: 100%;
-  height: 35vh;
+  height: 50vh;
   background-color: #e3e4e8;
 }
-/*# sourceMappingURL=cy_plant.css.map */
+/*# sourceMappingURL=sc_shop.css.map */
