@@ -1,11 +1,25 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   list-style: none;
   font-family: "CWTEXFANGSONG";
 }
 
+body .box-shadow {
+  -webkit-box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.7);
+          box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.7);
+}
+
+body .drop-shadow {
+  -webkit-filter: drop-shadow(0 12px 3px rgba(0, 0, 0, 0.6));
+          filter: drop-shadow(0 12px 3px rgba(0, 0, 0, 0.6));
+}
+
 body header {
-  padding: 0 5%;
+  padding: 0 5% 0 0;
 }
 
 body header ul {
@@ -75,9 +89,6 @@ body .cy_logo {
 
 body .container_first {
   width: 100%;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   position: relative;
 }
 
@@ -91,7 +102,7 @@ body .container_first .list_left {
       -ms-writing-mode: tb-lr;
           writing-mode: vertical-lr;
   font-size: 30px;
-  left: 25%;
+  right: 25%;
   top: -20%;
 }
 
@@ -123,9 +134,6 @@ body .container_first .gray_area {
   width: 70%;
   height: 45vh;
   background-color: #b8c6d1;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -220,25 +228,25 @@ body .sec_container .sec_position_btm {
   width: 80%;
   height: 60%;
   background-image: url(../img/plant.jpg);
-  background-attachment: fixed;
   background-size: cover;
   position: absolute;
   top: 10%;
+  right: 0;
 }
 
 body .sec_container .sec_position_btm .sec_position_top {
   width: 25vw;
   max-width: 300px;
-  min-width: 200px;
+  min-width: 250px;
   height: 25vw;
   max-height: 300px;
-  min-height: 200px;
-  padding: 3% 0;
+  min-height: 250px;
+  padding: 2% 0 0;
   background-color: white;
   position: absolute;
-  right: 0;
-  -webkit-transform: translate(50%, 55%);
-          transform: translate(50%, 55%);
+  left: 0;
+  -webkit-transform: translate(-50%, 65%);
+          transform: translate(-50%, 65%);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -246,36 +254,29 @@ body .sec_container .sec_position_btm .sec_position_top {
 
 @media (max-width: 1140px) {
   body .sec_container .sec_position_btm .sec_position_top {
-    -webkit-transform: translate(50%, 70%);
-            transform: translate(50%, 70%);
+    -webkit-transform: translate(-50%, 70%);
+            transform: translate(-50%, 70%);
   }
 }
 
 @media (max-width: 1040px) {
   body .sec_container .sec_position_btm .sec_position_top {
-    -webkit-transform: translate(50%, 80%);
-            transform: translate(50%, 80%);
+    -webkit-transform: translate(-50%, 80%);
+            transform: translate(-50%, 80%);
   }
 }
 
 @media (max-width: 960px) {
   body .sec_container .sec_position_btm .sec_position_top {
-    -webkit-transform: translate(50%, 105%);
-            transform: translate(50%, 105%);
+    -webkit-transform: translate(-50%, 105%);
+            transform: translate(-50%, 105%);
   }
 }
 
 @media (max-width: 840px) {
   body .sec_container .sec_position_btm .sec_position_top {
-    -webkit-transform: translate(50%, 120%);
-            transform: translate(50%, 120%);
-  }
-}
-
-@media (max-width: 785px) {
-  body .sec_container .sec_position_btm .sec_position_top {
-    -webkit-transform: translate(50%, 135%);
-            transform: translate(50%, 135%);
+    -webkit-transform: translate(-50%, 110%);
+            transform: translate(-50%, 110%);
   }
 }
 
@@ -283,26 +284,47 @@ body .sec_container .sec_position_btm .sec_position_top .sec_position_top_title 
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  font-size: 20px;
+  font-size: 28px;
+  color: mediumseagreen;
 }
 
-body .sec_container .sec_position_btm .sec_position_top img {
+@media (max-width: 1440px) {
+  body .sec_container .sec_position_btm .sec_position_top .sec_position_top_title {
+    font-size: 23px;
+  }
+}
+
+body .sec_container .sec_position_btm .sec_position_top .sec_position_mid_title {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  font-size: 16px;
+  color: darkslategray;
 }
 
-body .sec_container .sec_position_btm .sec_position_top .sec_position_top_content {
-  padding: 3%;
+@media (max-width: 1440px) {
+  body .sec_container .sec_position_btm .sec_position_top .sec_position_mid_title {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 960px) {
+  body .sec_container .sec_position_btm .sec_position_top .sec_position_mid_title {
+    font-size: 12px;
+  }
+}
+
+body .sec_container .sec_position_btm .sec_position_top .sec_position_btm_content {
+  padding: 3% 15%;
   -webkit-box-flex: 6;
       -ms-flex: 6;
           flex: 6;
-  font-size: 16px;
+  font-size: 18px;
 }
 
-@media (max-width: 768px) {
-  body .sec_container .sec_position_btm .sec_position_top .sec_position_top_content {
-    font-size: 13px;
+@media (max-width: 1280px) {
+  body .sec_container .sec_position_btm .sec_position_top .sec_position_btm_content {
+    font-size: 16px;
   }
 }
 
@@ -349,7 +371,7 @@ body .card_desk .card .card_text {
 
 body footer {
   width: 100%;
-  background-color: grey;
+  background-color: #172c14;
   padding: 3% 10%;
 }
 
@@ -365,8 +387,20 @@ body footer .footer_top .adress {
   padding: 15px 30px;
 }
 
+body footer .footer_top .adress li {
+  color: white;
+}
+
 body footer .footer_top .adress span li {
+  color: white;
   min-width: 50px;
+  margin-right: 30px;
+}
+
+@media (max-width: 684px) {
+  body footer .footer_top .adress span li {
+    margin: unset;
+  }
 }
 
 body footer .footer_top .adress span .icon #facebook_icon {
@@ -386,7 +420,9 @@ body footer .footer_top .adress span .icon svg {
   margin: 5px;
 }
 
-body footer .footer_top .adress span .icon svg #path1, body footer .footer_top .adress span .icon svg #path2, body footer .footer_top .adress span .icon svg #path3 {
+body footer .footer_top .adress span .icon svg #path1,
+body footer .footer_top .adress span .icon svg #path2,
+body footer .footer_top .adress span .icon svg #path3 {
   fill: black;
 }
 
@@ -409,5 +445,6 @@ body footer .footer_top .adress span .icon svg:hover #path3 {
 
 body footer .footer_btm {
   padding: 30px 0;
+  color: white;
 }
 /*# sourceMappingURL=sc_shop.css.map */

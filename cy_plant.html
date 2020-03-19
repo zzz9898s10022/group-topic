@@ -19,22 +19,22 @@
 </head>
 
 <body>
-    <header class="banner">
+    <header class="banner drop-shadow">
         <ul class="nav justify-content-end">
             <li class="nav-item">
-                <a class="nav-link active" href="#">LOGIN</a>
+                <a class="nav-link active" href="#calendar_container">營業時間</a>
             </li>
             <li class="nav-item">
 
-                <a class="nav-link" href="#">SIGN UP</a>
+                <a class="nav-link" href="#sec_container">植務設計</a>
             </li>
             <li class="nav-item">
 
-                <a class="nav-link" href="#">WISH LIST</a>
+                <a class="nav-link" href="#card_container">植務小品</a>
             </li>
             <li class="nav-item">
 
-                <a class="nav-link" href="#">CART</a>
+                <a class="nav-link" href="#footer">聯絡我們</a>
             </li>
         </ul>
         <div class="cy_logo d-flex justify-content-center">
@@ -44,89 +44,60 @@
         </div>
     </header>
     <section>
-        <!-- <div class="container_first d-flex">
-            <div class="list_left d-flex">
-                <li>第一行</li>
-                <li>這是第二行文字</li>
-                <li>這是第三行</li>
-                <li>第四行</li>
-            </div>
-            <div class="gray_area d-flex">
-                <div class="plant_icon">
-                    <img width="125px" src="./img/plant_logo1.svg" alt="">
+        <div class="calendar_container" id="calendar_container">
+            <div class="content d-flex row box-shadow">
+                <div class="note col-6 col-xl-6 d-flex flex-column">
+                     <h3>情報更新</h3>
                 </div>
-            </div>
-        </div> -->
-    </section>
-    <section>
-        <div class="calendar_container d-flex ">
-            <div class="calendar">
-                
-                <img src="./img/calendar.jpg" alt="">
-                
-            </div>
-            <div class="design_concept d-flex flex-column">
-                <div class="little_logo">
-                    <img src=".img/cy_logo.svg" alt="">
+                <div class="calendar col-6 col-xl-6">
+                    <img width="100%" src="./img/calendar.jpg" alt="">
                 </div>
-                <h3>設計理念</h3>
-                <p>讓植物、盆栽、盆景走進生活裡，不論是陽台上、窗台邊甚至是大廳的中心位置，那一抹綠意可以輕鬆地帶給你沙漠、熱帶雨林、植物園溫室等不同的風格感受，而植物也會努力而認真的淨化空氣、改善環境。</p>
             </div>
         </div>
     </section>
     <section>
-        <div class="sec_container ">
+        <div class="sec_container " id="sec_container">
             <div class="sec_background_top"></div>
             <div class="sec_position_btm">
                 <div class="sec_position_top d-flex flex-column">
                     <div class="sec_position_top_title">群生ユーフォルビア </div>
-                    
+
                     <div class="sec_position_mid_title">密集する株がおりなすフォルム </div>
-                    <div class="sec_position_top_content">
+                    <div class="sec_position_btm_content">
                         ユーフォルビアには様々な種類がいて、形も様々ですが魅力的な群生を作る種も多いです。KIDORIオススメの群生株を今回入荷致しました。</div>
                 </div>
             </div>
             <div class="sec_background_btm"></div>
         </div>
     </section>
-    <section class="card_container">
+    <section class="card_container" id="card_container">
         <div class="card_desk d-flex flex-wrap ">
             <div class="card">
-                <div class="card_title">123</div>
-                <img src="/img/plant_logo.svg" alt="">
-                <div class="card_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptatibus,
-                    consequatur aperiam nobis fugit nihil assumenda impedit illo dolorem repellendus nesciunt dicta
-                    distinctio odio maxime voluptas provident ab dolor possimus?</div>
-                <button class="card_text btn btn-primary">333</button>
+                <div class="card_title">植務小品</div>
+                <img width="100%" src="/img/card1.jpg" alt="">
+                <div class="card_text">青山依舊在，幾度夕陽紅。慣看秋月春，風。一壺濁酒喜相逢，浪花淘盡英雄。</div>
+                <div class="card_link">了解更多</div>
             </div>
             <div class="card">
-                <div class="card_title">123</div>
-                <img src="/img/plant_logo.svg" alt="">
-                <div class="card_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptatibus,
-                    consequatur aperiam nobis fugit nihil assumenda impedit illo dolorem repellendus nesciunt dicta
-                    distinctio odio maxime voluptas provident ab dolor possimus?</div>
-                <button class="card_text btn btn-primary">333</button>
+                <div class="card_title">植務小品</div>
+                <img width="100%" src="/img/card2.jpg" alt="">
+                <div class="card_text">青山依舊在，幾度夕陽紅。慣看秋月春，風。一壺濁酒喜相逢，浪花淘盡英雄。</div>
+                <div class="card_link">了解更多</div>
             </div>
             <div class="card">
-                <div class="card_title">123</div>
-                <img src="/img/plant_logo.svg" alt="">
-                <div class="card_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptatibus,
-                    consequatur aperiam nobis fugit nihil assumenda impedit illo dolorem repellendus nesciunt dicta
-                    distinctio odio maxime voluptas provident ab dolor possimus?</div>
-                <button class="card_text btn btn-primary">333</button>
+                <div class="card_title">植務小品</div>
+                <img width="100%" src="/img/card3.jpg" alt="">
+                <div class="card_text">清明時節雨紛紛，路上行人欲斷魂，借問酒家何處有？牧童遙指杏花村。</div>
+                <div class="card_link">了解更多</div>
             </div>
 
         </div>
     </section>
-    <!-- <div class="above_footer">
-        <div class="left_box"></div>
-        <img src="/img/sc_logo.svg" alt="">
-    </div> -->
     <footer>
-        <div class="footer ">
+        <div class="footer" id="footer">
             <div class="footer_top d-flex">
                 <div class="logo">
-                    <img width="100px" src="/img/sc_logo.svg" alt="">
+                    <img width="100px" src="/img/cy_logo.svg" alt="">
                 </div>
                 <div class="adress">
                     <li>地址: 南投縣埔里鎭東榮路220號, Puli, T'Ai-Wan, Taiwan</li>

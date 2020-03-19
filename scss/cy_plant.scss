@@ -1,13 +1,20 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   list-style: none;
   font-family: "CWTEXFANGSONG";
-  a {
-    color: cornsilk;
-    &:hover {
-      color: crimson;
-    }
+
+  //------------------------------此區可對物品添加陰影
+  .box-shadow {
+    box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.7);
   }
+  .drop-shadow {
+    filter: drop-shadow(0 12px 3px rgba(0, 0, 0, 0.6));
+  }
+  // ------------------------------
+
   .banner {
     height: 100vh;
     background-image: url(/img/banner.jpg);
@@ -16,141 +23,60 @@ body {
 
     ul {
       padding: 10px;
+      a {
+        font-size: 28px;
+        color: #270501;
+        transition: 0.5s;
 
-      .nav-item:nth-child(1) {
-        position: relative;
-        &::before {
-          content: "";
-          position: absolute;
-          width: 20px;
-          height: 20px;
-          left: -10px;
-          top: 10px;
-          background-image: url(../img/icon/lock.svg);
+        @media (max-width: 960px) {
+          font-size: 24px;
         }
-      }
-      .nav-item:nth-child(2) {
-        position: relative;
-        &::before {
-          content: "";
-          position: absolute;
-          width: 20px;
-          height: 20px;
-          left: -10px;
-          top: 10px;
-          background-image: url(../img/icon/user.svg);
+        @media (max-width: 650px) {
+          font-size: 18px;
         }
-      }
-      .nav-item:nth-child(3) {
-        position: relative;
-        &::before {
-          content: "";
-          position: absolute;
-          width: 20px;
-          height: 20px;
-          left: -10px;
-          top: 10px;
-          background-image: url(../img/icon/heart.svg);
-        }
-      }
-      .nav-item:nth-child(4) {
-        position: relative;
-        &::before {
-          content: "";
-          position: absolute;
-          width: 20px;
-          height: 20px;
-          left: -10px;
-          top: 10px;
-          background-image: url(../img/icon/shopping-cart.svg);
+        &:hover {
+          color: crimson;
         }
       }
     }
+    .cy_logo {
+      padding: 5% 0 10%;
+      width: 100%;
+    }
   }
-  .cy_logo {
-    padding: 5% 0 10%;
-    width: 100%;
-  }
-  // .container_first {
-  //   width: 100%;
-  //   justify-content: flex-end;
-  //   position: relative;
-  //   .list_left {
-  //     position: absolute;
-  //     flex-direction: column;
-  //     writing-mode: vertical-lr;
-  //     font-size: 30px;
-  //     left: 25%;
-  //     top: -20%;
-  //     @media (max-width: 1440px) {
-  //       font-size: 26px;
-  //       left: 25%;
-  //       top: -12%;
-  //     }
-  //     @media (max-width: 1024px) {
-  //       font-size: 22px;
-  //       left: 22%;
-  //       top: -15%;
-  //     }
 
-  //     @media (max-width: 768px) {
-  //       font-size: 18px;
-  //       left: 25%;
-  //       top: -12%;
-  //     }
-  //   }
-  //   .gray_area {
-  //     width: 70%;
-  //     height: 45vh;
-  //     background-color: #b8c6d1;
-  //     justify-content: flex-end;
-  //     align-items: flex-end;
-  //     .plant_logo {
-  //       width: 50px;
-  //     }
-  //   }
-  // }
   .calendar_container {
     background-image: url(/img/background.jpg);
     background-size: cover;
     align-items: center;
-    padding: 5%;
-    img {
+    width: 100%;
+    // height: 100vh;
+    padding: 5% 20%;
+    .content {
       width: 100%;
-    }
-    .design_concept {
-      width: 50%;
       height: 100%;
-      min-width: 200px;
-      padding: 5%;
-      align-items: center;
-      background-color: #d7d7d7;
-      img {
-        padding: 10% 25%;
+      .col-xl-6 {
+        padding: unset;
       }
-      h3 {
-        padding: 10% 5%;
-        font-size: 50px;
-        @media (max-width: 1440px) {
-          font-size: 45px;
-        }
-        @media (max-width: 1024px) {
-          font-size: 40px;
-        }
-        @media (max-width: 768px) {
-          font-size: 35px;
-        }
-      }
-      p {
-        font-size: 30px;
-        @media (max-width: 1440px) {
+      .note {
+        width: 50%;
+        align-items: center;
+        background-image: url(/img/cy_calendar_L.jpg);
+
+        h3 {
+          padding: 5% 0;
+          color: white;
+
           font-size: 25px;
-        }
-        @media (max-width: 1024px) {
-          font-size: 23px;
-        }
-        @media (max-width: 980px) {
-          font-size: 20px;
+          @media (max-width: 1440px) {
+            font-size: 23px;
+          }
+          @media (max-width: 1024px) {
+            font-size: 21px;
+          }
+          @media (max-width: 768px) {
+            font-size: 18px;
+          }
         }
       }
     }
@@ -165,7 +91,7 @@ body {
     position: relative;
     .sec_position_btm {
       width: 80%;
-      height: 60%;
+      height: 55%;
       background-image: url(../img/plant.jpg);
       background-position: center;
       background-size: cover;
@@ -174,15 +100,15 @@ body {
       .sec_position_top {
         width: 25vw;
         max-width: 300px;
-        min-width: 200px;
+        min-width: 250px;
         height: 25vw;
         max-height: 300px;
-        min-height: 200px;
-        padding: 3% 0;
+        min-height: 250px;
+        padding: 2% 0 0;
         background-color: white;
         position: absolute;
         right: 0;
-        transform: translate(50%, 55%);
+        transform: translate(50%, 65%);
         @media (max-width: 1140px) {
           transform: translate(50%, 70%);
         }
@@ -193,29 +119,44 @@ body {
           transform: translate(50%, 105%);
         }
         @media (max-width: 840px) {
-          transform: translate(50%, 120%);
+          transform: translate(50%, 110%);
         }
-        @media (max-width: 785px) {
-          transform: translate(50%, 135%);
-        }
+        // @media (max-width: 785px) {
+        //   transform: translate(50%, 120%);
+        // }
         align-items: center;
         .sec_position_top_title {
           flex: 1;
-          font-size: 18px;
+          font-size: 28px;
           color: mediumseagreen;
+          @media (max-width: 1440px) {
+            font-size: 23px;
+          }
+          // @media (max-width: 960px) {
+          //   font-size: 23px;
+          // }
         }
         .sec_position_mid_title {
           flex: 1;
-          font-size: 12px;
+          font-size: 16px;
           color: darkslategray;
+          @media (max-width: 1440px) {
+            font-size: 14px;
+          }
+          @media (max-width: 960px) {
+            font-size: 12px;
+          }
         }
-        .sec_position_top_content {
+        .sec_position_btm_content {
           padding: 3% 15%;
           flex: 6;
-          font-size: 13px;
-          @media (max-width: 768px) {
-            font-size: 13px;
+          font-size: 18px;
+          @media (max-width: 1280px) {
+            font-size: 16px;
           }
+          // @media (max-width: 768px) {
+          //   font-size: 14px;
+          // }
         }
       }
     }
@@ -236,7 +177,8 @@ body {
     justify-content: space-around;
     .card {
       width: 25%;
-      padding: 20px 10px;
+      padding: 20px 0;
+      background-color: #577e6c;
       @media (max-width: 990px) {
         width: 30%;
       }
@@ -245,12 +187,24 @@ body {
         margin: 10px 0;
       }
       .card_title {
+        color: #df7d30;
+        font-size: xx-large;
         padding: 5% 10%;
         margin: auto;
       }
       .card_text {
+        color: #092b00;
         padding: 5% 10%;
         margin: auto;
+      }
+      .card_link {
+        color: #270501;
+        margin: 0 auto;
+        transition: 0.3s;
+        &:hover {
+          border-top: 1px #270501 solid;
+          border-bottom: 1px #270501 solid;
+        }
       }
     }
   }
@@ -266,7 +220,7 @@ body {
       }
       .adress {
         padding: 15px 30px;
-        li{
+        li {
           color: white;
         }
         span {
@@ -274,7 +228,7 @@ body {
             color: white;
             min-width: 50px;
             margin-right: 30px;
-            @media (max-width:684px) {
+            @media (max-width: 684px) {
               margin: unset;
             }
           }
