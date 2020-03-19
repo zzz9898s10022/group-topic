@@ -212,14 +212,16 @@ body .sec_container {
 
 body .sec_container .sec_background_top {
   width: 100%;
-  height: 30vh;
+  height: 60vh;
   background-color: white;
 }
 
 body .sec_container .sec_position_btm {
   width: 80%;
   height: 60%;
-  background-color: #bec3cc;
+  background-image: url(../img/plant.jpg);
+  background-attachment: fixed;
+  background-size: cover;
   position: absolute;
   top: 10%;
 }
@@ -235,11 +237,46 @@ body .sec_container .sec_position_btm .sec_position_top {
   background-color: white;
   position: absolute;
   right: 0;
-  -webkit-transform: translate(50%, 25%);
-          transform: translate(50%, 25%);
+  -webkit-transform: translate(50%, 55%);
+          transform: translate(50%, 55%);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 1140px) {
+  body .sec_container .sec_position_btm .sec_position_top {
+    -webkit-transform: translate(50%, 70%);
+            transform: translate(50%, 70%);
+  }
+}
+
+@media (max-width: 1040px) {
+  body .sec_container .sec_position_btm .sec_position_top {
+    -webkit-transform: translate(50%, 80%);
+            transform: translate(50%, 80%);
+  }
+}
+
+@media (max-width: 960px) {
+  body .sec_container .sec_position_btm .sec_position_top {
+    -webkit-transform: translate(50%, 105%);
+            transform: translate(50%, 105%);
+  }
+}
+
+@media (max-width: 840px) {
+  body .sec_container .sec_position_btm .sec_position_top {
+    -webkit-transform: translate(50%, 120%);
+            transform: translate(50%, 120%);
+  }
+}
+
+@media (max-width: 785px) {
+  body .sec_container .sec_position_btm .sec_position_top {
+    -webkit-transform: translate(50%, 135%);
+            transform: translate(50%, 135%);
+  }
 }
 
 body .sec_container .sec_position_btm .sec_position_top .sec_position_top_title {
@@ -271,7 +308,106 @@ body .sec_container .sec_position_btm .sec_position_top .sec_position_top_conten
 
 body .sec_container .sec_background_btm {
   width: 100%;
-  height: 50vh;
+  height: 35vh;
   background-color: #e3e4e8;
+}
+
+body .card_desk {
+  width: 100%;
+  padding: 10% 0;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body .card_desk .card {
+  width: 25%;
+  padding: 20px 10px;
+}
+
+@media (max-width: 990px) {
+  body .card_desk .card {
+    width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  body .card_desk .card {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+body .card_desk .card .card_title {
+  padding: 5% 10%;
+  margin: auto;
+}
+
+body .card_desk .card .card_text {
+  padding: 5% 10%;
+  margin: auto;
+}
+
+body footer {
+  width: 100%;
+  background-color: grey;
+  padding: 3% 10%;
+}
+
+body footer .footer_top {
+  width: 100%;
+}
+
+body footer .footer_top .logo {
+  width: 30%;
+}
+
+body footer .footer_top .adress {
+  padding: 15px 30px;
+}
+
+body footer .footer_top .adress span li {
+  min-width: 50px;
+}
+
+body footer .footer_top .adress span .icon #facebook_icon {
+  stroke: black;
+  stroke-width: 9;
+}
+
+body footer .footer_top .adress span .icon #facebook_icon:hover {
+  stroke: blue;
+  fill: blue;
+}
+
+body footer .footer_top .adress span .icon svg {
+  width: 24px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  margin: 5px;
+}
+
+body footer .footer_top .adress span .icon svg #path1, body footer .footer_top .adress span .icon svg #path2, body footer .footer_top .adress span .icon svg #path3 {
+  fill: black;
+}
+
+body footer .footer_top .adress span .icon svg:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body footer .footer_top .adress span .icon svg:hover #path1 {
+  fill: url(#SVGID_1_);
+}
+
+body footer .footer_top .adress span .icon svg:hover #path2 {
+  fill: url(#SVGID_2_);
+}
+
+body footer .footer_top .adress span .icon svg:hover #path3 {
+  fill: url(#SVGID_3_);
+}
+
+body footer .footer_btm {
+  padding: 30px 0;
 }
 /*# sourceMappingURL=sc_shop.css.map */

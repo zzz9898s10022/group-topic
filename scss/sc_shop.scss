@@ -1,195 +1,291 @@
 body {
-    margin: 0;
-    list-style: none;
-    font-family: "CWTEXFANGSONG";
-    header {
-      padding: 0 5%;
-      ul {
-        padding: 10px;
-  
-        .nav-item:nth-child(1) {
-          position: relative;
-          &::before {
-            content: "";
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            left: -10px;
-            top: 10px;
-            background-image: url(../img/icon/lock.svg);
-          }
+  margin: 0;
+  list-style: none;
+  font-family: "CWTEXFANGSONG";
+  header {
+    padding: 0 5%;
+    ul {
+      padding: 10px;
+
+      .nav-item:nth-child(1) {
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          left: -10px;
+          top: 10px;
+          background-image: url(../img/icon/lock.svg);
         }
-        .nav-item:nth-child(2) {
-          position: relative;
-          &::before {
-            content: "";
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            left: -10px;
-            top: 10px;
-            background-image: url(../img/icon/user.svg);
-          }
+      }
+      .nav-item:nth-child(2) {
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          left: -10px;
+          top: 10px;
+          background-image: url(../img/icon/user.svg);
         }
-        .nav-item:nth-child(3) {
-          position: relative;
-          &::before {
-            content: "";
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            left: -10px;
-            top: 10px;
-            background-image: url(../img/icon/heart.svg);
-          }
+      }
+      .nav-item:nth-child(3) {
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          left: -10px;
+          top: 10px;
+          background-image: url(../img/icon/heart.svg);
         }
-        .nav-item:nth-child(4) {
-          position: relative;
-          &::before {
-            content: "";
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            left: -10px;
-            top: 10px;
-            background-image: url(../img/icon/shopping-cart.svg);
-          }
+      }
+      .nav-item:nth-child(4) {
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          left: -10px;
+          top: 10px;
+          background-image: url(../img/icon/shopping-cart.svg);
         }
       }
     }
-    .cy_logo {
-      padding: 5% 0 10%;
+  }
+  .cy_logo {
+    padding: 5% 0 10%;
+    width: 100%;
+  }
+  .container_first {
+    width: 100%;
+    justify-content: flex-end;
+    position: relative;
+    .list_left {
+      position: absolute;
+      flex-direction: column;
+      writing-mode: vertical-lr;
+      font-size: 30px;
+      left: 25%;
+      top: -20%;
+      @media (max-width: 1440px) {
+        font-size: 26px;
+        left: 25%;
+        top: -12%;
+      }
+      @media (max-width: 1024px) {
+        font-size: 22px;
+        left: 22%;
+        top: -15%;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 18px;
+        left: 25%;
+        top: -12%;
+      }
+    }
+    .gray_area {
+      width: 70%;
+      height: 45vh;
+      background-color: #b8c6d1;
+      justify-content: flex-end;
+      align-items: flex-end;
+      .plant_logo {
+        width: 50px;
+      }
+    }
+  }
+  .calendar_container {
+    align-items: center;
+    padding: 5% 0;
+    img {
       width: 100%;
     }
-    .container_first {
-      width: 100%;
-      justify-content: flex-end;
-      position: relative;
-      .list_left {
-        position: absolute;
-        flex-direction: column;
-        writing-mode: vertical-lr;
-        font-size: 30px;
-        left: 25%;
-        top: -20%;
+    .design_concept {
+      width: 50%;
+      height: 100%;
+      min-width: 200px;
+      padding: 5%;
+      align-items: center;
+      background-color: #d7d7d7;
+      img {
+        padding: 10% 25%;
+      }
+      h3 {
+        padding: 10% 5%;
+        font-size: 50px;
         @media (max-width: 1440px) {
-          font-size: 26px;
-          left: 25%;
-          top: -12%;
+          font-size: 45px;
         }
         @media (max-width: 1024px) {
-          font-size: 22px;
-          left: 22%;
-          top: -15%;
+          font-size: 40px;
         }
-  
         @media (max-width: 768px) {
-          font-size: 18px;
-          left: 25%;
-          top: -12%;
+          font-size: 35px;
         }
       }
-      .gray_area {
-        width: 70%;
-        height: 45vh;
-        background-color: #b8c6d1;
-        justify-content: flex-end;
-        align-items: flex-end;
-        .plant_logo {
-          width: 50px;
+      p {
+        font-size: 30px;
+        @media (max-width: 1440px) {
+          font-size: 25px;
+        }
+        @media (max-width: 1024px) {
+          font-size: 23px;
+        }
+        @media (max-width: 980px) {
+          font-size: 20px;
         }
       }
     }
-    .calendar_container {
-      align-items: center;
-      padding: 5% 0;
-      img {
-        width: 100%;
-      }
-      .design_concept {
-        width: 50%;
-        height: 100%;
+  }
+  .sec_container {
+    .sec_background_top {
+      width: 100%;
+      height: 60vh;
+      background-color: white;
+    }
+    position: relative;
+    .sec_position_btm {
+      width: 80%;
+      height: 60%;
+      background-image: url(../img/plant.jpg);
+      background-attachment: fixed;
+      background-size: cover;
+      position: absolute;
+      top: 10%;
+      .sec_position_top {
+        width: 25vw;
+        max-width: 300px;
         min-width: 200px;
-        padding: 5%;
+        height: 25vw;
+        max-height: 300px;
+        min-height: 200px;
+        padding: 3% 0;
+        background-color: white;
+        position: absolute;
+        right: 0;
+        transform: translate(50%, 55%);
+        @media (max-width: 1140px) {
+          transform: translate(50%, 70%);
+        }
+        @media (max-width: 1040px) {
+          transform: translate(50%, 80%);
+        }
+        @media (max-width: 960px) {
+          transform: translate(50%, 105%);
+        }
+        @media (max-width: 840px) {
+          transform: translate(50%, 120%);
+        }
+        @media (max-width: 785px) {
+          transform: translate(50%, 135%);
+        }
         align-items: center;
-        background-color: #d7d7d7;
+        .sec_position_top_title {
+          flex: 1;
+          font-size: 20px;
+        }
         img {
-          padding: 10% 25%;
+          flex: 1;
         }
-        h3 {
-          padding: 10% 5%;
-          font-size: 50px;
-          @media (max-width: 1440px) {
-            font-size: 45px;
-          }
-          @media (max-width: 1024px) {
-            font-size: 40px;
-          }
+        .sec_position_top_content {
+          padding: 3%;
+          flex: 6;
+          font-size: 16px;
           @media (max-width: 768px) {
-            font-size: 35px;
-          }
-        }
-        p {
-          font-size: 30px;
-          @media (max-width: 1440px) {
-            font-size: 25px;
-          }
-          @media (max-width: 1024px) {
-            font-size: 23px;
-          }
-          @media (max-width: 980px) {
-            font-size: 20px;
+            font-size: 13px;
           }
         }
       }
     }
-    .sec_container {
-      .sec_background_top {
-        width: 100%;
-        height: 30vh;
-        background-color: white;
+    .sec_background_btm {
+      width: 100%;
+      height: 35vh;
+      background-color: #e3e4e8;
+    }
+  }
+  .card_desk {
+    width: 100%;
+    padding: 10% 0;
+    justify-content: space-around;
+    .card {
+      width: 25%;
+      padding: 20px 10px;
+      @media (max-width:990px) {
+        width: 30%;
       }
-      position: relative;
-      .sec_position_btm {
-        width: 80%;
-        height: 60%;
-        background-color: #bec3cc;
-        position: absolute;
-        top: 10%;
-        .sec_position_top {
-          width: 25vw;
-          max-width: 300px;
-          min-width: 200px;
-          height: 25vw;
-          max-height: 300px;
-          min-height: 200px;
-          padding: 3% 0;
-          background-color: white;
-          position: absolute;
-          right: 0;
-          transform: translate(50%, 25%);
-          align-items: center;
-          .sec_position_top_title {
-            flex: 1;
-            font-size: 20px;
+      @media (max-width:768px) {
+        width: 100%;
+        margin: 10px 0;
+      }
+      .card_title {
+        padding: 5% 10%;
+        margin: auto;
+      }
+      .card_text {
+        padding: 5% 10%;
+        margin: auto;
+      }
+    }
+  }
+  
+  footer{
+    width: 100%;
+    background-color: grey;
+    padding: 3% 10%;
+    .footer_top{
+      width: 100%;
+      .logo{
+       width:30%;
+      }
+      .adress{
+        padding: 15px 30px;
+        span{
+          li{
+            min-width: 50px;
           }
-          img {
-            flex: 1;
-          }
-          .sec_position_top_content {
-            padding: 3%;
-            flex: 6;
-            font-size: 16px;
-            @media (max-width: 768px) {
-              font-size: 13px;
+          .icon{
+            
+            #facebook_icon{
+              stroke: black;
+              stroke-width: 9;
+              &:hover{
+                stroke: blue;
+                fill: blue;
+              }
+            }
+            // 先設定stroke(邊框)顏色及粗細，然後再設定hover後的狀態
+            svg{
+              width: 24px;
+              transition: 0.5s ;
+              margin: 5px;
+              #path1,#path2,#path3{
+                fill:black
+              }
+              &:hover{
+                transition: 0.3s;
+                #path1{
+                  fill:url(#SVGID_1_);
+                }
+                #path2{
+                  fill:url(#SVGID_2_);
+                }
+                #path3{
+                  fill:url(#SVGID_3_);
+                }
+              }
             }
           }
         }
       }
-      .sec_background_btm {
-        width: 100%;
-        height: 50vh;
-        background-color: #e3e4e8;
-      }
+    }
+    .footer_btm{
+      padding: 30px 0;
     }
   }
+}
