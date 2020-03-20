@@ -14,58 +14,74 @@ body {
     }
     // ------------------------------
   header {
-    padding: 0 5% 0 0;
+    height: 100vh;
+    padding: 0 5%;
+    background-image: url(../img/sc_banner.jpg);
     ul {
       padding: 10px;
+      a {
+        font-size: 28px;
+        color: #270501;
+        transition: 0.5s;
 
-      .nav-item:nth-child(1) {
-        position: relative;
-        &::before {
-          content: "";
-          position: absolute;
-          width: 20px;
-          height: 20px;
-          left: -10px;
-          top: 10px;
-          background-image: url(../img/icon/lock.svg);
+        @media (max-width: 960px) {
+          font-size: 24px;
+        }
+        @media (max-width: 650px) {
+          font-size: 18px;
+        }
+        &:hover {
+          color: crimson;
         }
       }
-      .nav-item:nth-child(2) {
-        position: relative;
-        &::before {
-          content: "";
-          position: absolute;
-          width: 20px;
-          height: 20px;
-          left: -10px;
-          top: 10px;
-          background-image: url(../img/icon/user.svg);
-        }
-      }
-      .nav-item:nth-child(3) {
-        position: relative;
-        &::before {
-          content: "";
-          position: absolute;
-          width: 20px;
-          height: 20px;
-          left: -10px;
-          top: 10px;
-          background-image: url(../img/icon/heart.svg);
-        }
-      }
-      .nav-item:nth-child(4) {
-        position: relative;
-        &::before {
-          content: "";
-          position: absolute;
-          width: 20px;
-          height: 20px;
-          left: -10px;
-          top: 10px;
-          background-image: url(../img/icon/shopping-cart.svg);
-        }
-      }
+      // .nav-item:nth-child(1) {
+      //   position: relative;
+      //   &::before {
+      //     content: "";
+      //     position: absolute;
+      //     width: 20px;
+      //     height: 20px;
+      //     left: -10px;
+      //     top: 10px;
+      //     background-image: url(../img/icon/lock.svg);
+      //   }
+      // }
+      // .nav-item:nth-child(2) {
+      //   position: relative;
+      //   &::before {
+      //     content: "";
+      //     position: absolute;
+      //     width: 20px;
+      //     height: 20px;
+      //     left: -10px;
+      //     top: 10px;
+      //     background-image: url(../img/icon/user.svg);
+      //   }
+      // }
+      // .nav-item:nth-child(3) {
+      //   position: relative;
+      //   &::before {
+      //     content: "";
+      //     position: absolute;
+      //     width: 20px;
+      //     height: 20px;
+      //     left: -10px;
+      //     top: 10px;
+      //     background-image: url(../img/icon/heart.svg);
+      //   }
+      // }
+      // .nav-item:nth-child(4) {
+      //   position: relative;
+      //   &::before {
+      //     content: "";
+      //     position: absolute;
+      //     width: 20px;
+      //     height: 20px;
+      //     left: -10px;
+      //     top: 10px;
+      //     background-image: url(../img/icon/shopping-cart.svg);
+      //   }
+      // }
     }
   }
   .cy_logo {

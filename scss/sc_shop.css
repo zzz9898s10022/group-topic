@@ -19,67 +19,36 @@ body .drop-shadow {
 }
 
 body header {
-  padding: 0 5% 0 0;
+  height: 100vh;
+  padding: 0 5%;
+  background-image: url(../img/sc_banner.jpg);
 }
 
 body header ul {
   padding: 10px;
 }
 
-body header ul .nav-item:nth-child(1) {
-  position: relative;
+body header ul a {
+  font-size: 28px;
+  color: #270501;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-body header ul .nav-item:nth-child(1)::before {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  left: -10px;
-  top: 10px;
-  background-image: url(../img/icon/lock.svg);
+@media (max-width: 960px) {
+  body header ul a {
+    font-size: 24px;
+  }
 }
 
-body header ul .nav-item:nth-child(2) {
-  position: relative;
+@media (max-width: 650px) {
+  body header ul a {
+    font-size: 18px;
+  }
 }
 
-body header ul .nav-item:nth-child(2)::before {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  left: -10px;
-  top: 10px;
-  background-image: url(../img/icon/user.svg);
-}
-
-body header ul .nav-item:nth-child(3) {
-  position: relative;
-}
-
-body header ul .nav-item:nth-child(3)::before {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  left: -10px;
-  top: 10px;
-  background-image: url(../img/icon/heart.svg);
-}
-
-body header ul .nav-item:nth-child(4) {
-  position: relative;
-}
-
-body header ul .nav-item:nth-child(4)::before {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  left: -10px;
-  top: 10px;
-  background-image: url(../img/icon/shopping-cart.svg);
+body header ul a:hover {
+  color: crimson;
 }
 
 body .cy_logo {

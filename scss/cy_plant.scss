@@ -31,8 +31,11 @@ body {
         @media (max-width: 960px) {
           font-size: 24px;
         }
+        @media (max-width: 768px) {
+          font-size: 20px;
+        }
         @media (max-width: 650px) {
-          font-size: 18px;
+          font-size: 16px;
         }
         &:hover {
           color: crimson;
@@ -50,8 +53,8 @@ body {
     background-size: cover;
     align-items: center;
     width: 100%;
-    // height: 100vh;
-    padding: 5% 20%;
+    // min-height: 0vh;
+    padding: 5% 5%;
     .content {
       width: 100%;
       height: 100%;
@@ -79,6 +82,9 @@ body {
           }
         }
       }
+      img {
+        width: 100%;
+      }
     }
   }
   .sec_container {
@@ -86,12 +92,12 @@ body {
     background-size: cover;
     .sec_background_top {
       width: 100%;
-      height: 60vh;
+      height: 80vh;
     }
     position: relative;
     .sec_position_btm {
       width: 80%;
-      height: 55%;
+      min-height: 80vh;
       background-image: url(../img/plant.jpg);
       background-position: center;
       background-size: cover;
@@ -100,35 +106,21 @@ body {
       .sec_position_top {
         width: 25vw;
         max-width: 300px;
-        min-width: 250px;
+        min-width: 240px;
         height: 25vw;
         max-height: 300px;
-        min-height: 250px;
+        min-height: 240px;
         padding: 2% 0 0;
         background-color: white;
         position: absolute;
-        right: 0;
-        transform: translate(50%, 65%);
-        @media (max-width: 1140px) {
-          transform: translate(50%, 70%);
-        }
-        @media (max-width: 1040px) {
-          transform: translate(50%, 80%);
-        }
-        @media (max-width: 960px) {
-          transform: translate(50%, 105%);
-        }
-        @media (max-width: 840px) {
-          transform: translate(50%, 110%);
-        }
-        // @media (max-width: 785px) {
-        //   transform: translate(50%, 120%);
-        // }
+        top: 50%;
+        transform: translateY(-50%);
+
         align-items: center;
         .sec_position_top_title {
           flex: 1;
           font-size: 28px;
-          color: mediumseagreen;
+          color: #66c302;
           @media (max-width: 1440px) {
             font-size: 23px;
           }
@@ -152,11 +144,8 @@ body {
           flex: 6;
           font-size: 18px;
           @media (max-width: 1280px) {
-            font-size: 16px;
+            font-size: 15px;
           }
-          // @media (max-width: 768px) {
-          //   font-size: 14px;
-          // }
         }
       }
     }
@@ -187,7 +176,7 @@ body {
         margin: 10px 0;
       }
       .card_title {
-        color: #df7d30;
+        color: #66c302;
         font-size: xx-large;
         padding: 5% 10%;
         margin: auto;
@@ -197,13 +186,56 @@ body {
         padding: 5% 10%;
         margin: auto;
       }
+
       .card_link {
-        color: #270501;
-        margin: 0 auto;
-        transition: 0.3s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
         &:hover {
-          border-top: 1px #270501 solid;
-          border-bottom: 1px #270501 solid;
+          .line-T {
+            &::before {
+              transform: scaleX(1);
+              transform-origin: right;
+            }
+          }
+          .line-B {
+            &::before {
+              transform: scaleX(1);
+              transform-origin: left;
+            }
+          }
+        }
+
+        .line-T {
+          height: 2px;
+          width: 70px;
+          background-color: rgba(0, 0, 0, 0.2);
+          &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: #66c302;
+            transform: scaleX(0);
+            transition: transform 0.3s;
+            transform-origin: left;
+          }
+        }
+        .line-B {
+          height: 2px;
+          width: 70px;
+          background-color: rgba(0, 0, 0, 0.2);
+          &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: #66c302;
+            transform: scaleX(0);
+            transition: transform 0.3s;
+            transform-origin: right;
+          }
         }
       }
     }
