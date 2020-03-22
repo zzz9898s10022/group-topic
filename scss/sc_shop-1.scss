@@ -1,0 +1,437 @@
+html{
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  list-style: none;
+  font-family: "CWTEXFANGSONG";
+    //------------------------------此區可對物品添加陰影
+    .box-shadow {
+      box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.7);
+    }
+    .drop-shadow {
+      filter: drop-shadow(0 12px 3px rgba(0, 0, 0, 0.6));
+    }
+    // ------------------------------
+  header {
+    height: 100vh;
+    padding: 0 5%;
+    background-image: url(../img/sc_banner.jpg);
+    ul {
+      padding: 10px;
+      a {
+        font-size: 28px;
+        color: #270501;
+        transition: 0.5s;
+
+        @media (max-width: 960px) {
+          font-size: 24px;
+        }
+        @media (max-width: 650px) {
+          font-size: 18px;
+        }
+        &:hover {
+          color: crimson;
+        }
+      }
+      // .nav-item:nth-child(1) {
+      //   position: relative;
+      //   &::before {
+      //     content: "";
+      //     position: absolute;
+      //     width: 20px;
+      //     height: 20px;
+      //     left: -10px;
+      //     top: 10px;
+      //     background-image: url(../img/icon/lock.svg);
+      //   }
+      // }
+      // .nav-item:nth-child(2) {
+      //   position: relative;
+      //   &::before {
+      //     content: "";
+      //     position: absolute;
+      //     width: 20px;
+      //     height: 20px;
+      //     left: -10px;
+      //     top: 10px;
+      //     background-image: url(../img/icon/user.svg);
+      //   }
+      // }
+      // .nav-item:nth-child(3) {
+      //   position: relative;
+      //   &::before {
+      //     content: "";
+      //     position: absolute;
+      //     width: 20px;
+      //     height: 20px;
+      //     left: -10px;
+      //     top: 10px;
+      //     background-image: url(../img/icon/heart.svg);
+      //   }
+      // }
+      // .nav-item:nth-child(4) {
+      //   position: relative;
+      //   &::before {
+      //     content: "";
+      //     position: absolute;
+      //     width: 20px;
+      //     height: 20px;
+      //     left: -10px;
+      //     top: 10px;
+      //     background-image: url(../img/icon/shopping-cart.svg);
+      //   }
+      // }
+    }
+  }
+  .cy_logo {
+    padding: 5% 0 10%;
+    width: 100%;
+  }
+  .container_first {
+    width: 100%;
+    // justify-content: flex-end;
+    position: relative;
+    .list_left {
+      position: absolute;
+      flex-direction: column;
+      writing-mode: vertical-lr;
+      font-size: 30px;
+      right: 25%;
+      top: -20%;
+      @media (max-width: 1440px) {
+        font-size: 26px;
+        left: 25%;
+        top: -12%;
+      }
+      @media (max-width: 1024px) {
+        font-size: 22px;
+        left: 22%;
+        top: -15%;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 18px;
+        left: 25%;
+        top: -12%;
+      }
+    }
+    .gray_area {
+      width: 70%;
+      height: 45vh;
+      background-color: #b8c6d1;
+      align-items: flex-end;
+      .plant_logo {
+        width: 50px;
+      }
+    }
+  }
+  .calendar_container {
+    align-items: center;
+    padding: 5% 0;
+    img {
+      width: 100%;
+    }
+    .design_concept {
+      width: 50%;
+      height: 100%;
+      min-width: 200px;
+      padding: 5%;
+      align-items: center;
+      background-color: #d7d7d7;
+      img {
+        padding: 10% 25%;
+      }
+      h3 {
+        padding: 10% 5%;
+        font-size: 50px;
+        @media (max-width: 1440px) {
+          font-size: 45px;
+        }
+        @media (max-width: 1024px) {
+          font-size: 40px;
+        }
+        @media (max-width: 768px) {
+          font-size: 35px;
+        }
+      }
+      p {
+        font-size: 30px;
+        @media (max-width: 1440px) {
+          font-size: 25px;
+        }
+        @media (max-width: 1024px) {
+          font-size: 23px;
+        }
+        @media (max-width: 980px) {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .sec_container {
+    .sec_background_top {
+      width: 100%;
+      height: 60vh;
+      background-color: white;
+    }
+    position: relative;
+    .sec_position_btm {
+      width: 80%;
+      height: 60%;
+      background-image: url(../img/plant.jpg);
+      background-size: cover;
+      position: absolute;
+      top: 10%;
+      right: 0;
+      .sec_position_top {
+        width: 25vw;
+        max-width: 300px;
+        min-width: 250px;
+        height: 25vw;
+        max-height: 300px;
+        min-height: 250px;
+        padding: 2% 0 0;
+        background-color: white;
+        position: absolute;
+        left: 0;
+        transform: translate(-50%, 65%);
+        @media (max-width: 1140px) {
+          transform: translate(-50%, 70%);
+        }
+        @media (max-width: 1040px) {
+          transform: translate(-50%, 80%);
+        }
+        @media (max-width: 960px) {
+          transform: translate(-50%, 105%);
+        }
+        @media (max-width: 840px) {
+          transform: translate(-50%, 110%);
+        }
+        // @media (max-width: 785px) {
+        //   transform: translate(-50%, 130%);
+        // }
+        align-items: center;
+        .sec_position_top_title {
+          flex: 1;
+          font-size: 28px;
+          color: mediumseagreen;
+          @media (max-width: 1440px) {
+            font-size: 23px;
+          }
+        }
+        .sec_position_mid_title {
+          flex: 1;
+          font-size: 16px;
+          color: darkslategray;
+          @media (max-width: 1440px) {
+            font-size: 14px;
+          }
+          @media (max-width: 960px) {
+            font-size: 12px;
+          }
+        }
+        .sec_position_btm_content {
+          padding: 3% 15%;
+          flex: 6;
+          font-size: 18px;
+          @media (max-width: 1280px) {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    //   .sec_position_top {
+    //     width: 25vw;
+    //     max-width: 300px;
+    //     min-width: 200px;
+    //     height: 25vw;
+    //     max-height: 300px;
+    //     min-height: 200px;
+    //     padding: 3% 0;
+    //     background-color: white;
+    //     position: absolute;
+    //     right: 0;
+    //     transform: translate(50%, 55%);
+    //     @media (max-width: 1140px) {
+    //       transform: translate(50%, 70%);
+    //     }
+    //     @media (max-width: 1040px) {
+    //       transform: translate(50%, 80%);
+    //     }
+    //     @media (max-width: 960px) {
+    //       transform: translate(50%, 105%);
+    //     }
+    //     @media (max-width: 840px) {
+    //       transform: translate(50%, 120%);
+    //     }
+    //     @media (max-width: 785px) {
+    //       transform: translate(50%, 135%);
+    //     }
+    //     align-items: center;
+    //     .sec_position_top_title {
+    //       flex: 1;
+    //       font-size: 20px;
+    //     }
+    //     img {
+    //       flex: 1;
+    //     }
+    //     .sec_position_top_content {
+    //       padding: 3%;
+    //       flex: 6;
+    //       font-size: 16px;
+    //       @media (max-width: 768px) {
+    //         font-size: 13px;
+    //       }
+    //     }
+    //   }
+    // }
+    .sec_background_btm {
+      width: 100%;
+      height: 35vh;
+      background-color: #e3e4e8;
+    }
+  }
+  .card_desk {
+    width: 100%;
+    padding: 10% 0;
+    justify-content: space-around;
+    .card {
+      width: 25%;
+      padding: 20px 10px;
+      @media (max-width:990px) {
+        width: 30%;
+      }
+      @media (max-width:768px) {
+        width: 100%;
+        margin: 10px 0;
+      }
+      .card_title {
+        padding: 5% 10%;
+        margin: auto;
+      }
+      .card_text {
+        padding: 5% 10%;
+        margin: auto;
+      }
+    }
+  }
+    footer {
+    width: 100%;
+    background-color: #172c14;
+    padding: 3% 10%;
+    .footer_top {
+      width: 100%;
+      .logo {
+        width: 30%;
+      }
+      .adress {
+        padding: 15px 30px;
+        li {
+          color: white;
+        }
+        span {
+          li {
+            color: white;
+            min-width: 50px;
+            margin-right: 30px;
+            @media (max-width: 684px) {
+              margin: unset;
+            }
+          }
+          .icon {
+            #facebook_icon {
+              stroke: black;
+              stroke-width: 9;
+              &:hover {
+                stroke: blue;
+                fill: blue;
+              }
+            }
+            // 先設定stroke(邊框)顏色及粗細，然後再設定hover後的狀態
+            svg {
+              width: 24px;
+              transition: 0.5s;
+              margin: 5px;
+              #path1,
+              #path2,
+              #path3 {
+                fill: black;
+              }
+              &:hover {
+                transition: 0.3s;
+                #path1 {
+                  fill: url(#SVGID_1_);
+                }
+                #path2 {
+                  fill: url(#SVGID_2_);
+                }
+                #path3 {
+                  fill: url(#SVGID_3_);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .footer_btm {
+      padding: 30px 0;
+      color: white;
+    }
+  }
+  // footer{
+  //   width: 100%;
+  //   background-color: grey;
+  //   padding: 3% 10%;
+  //   .footer_top{
+  //     width: 100%;
+  //     .logo{
+  //      width:30%;
+  //     }
+  //     .adress{
+  //       padding: 15px 30px;
+  //       span{
+  //         li{
+  //           min-width: 50px;
+  //         }
+  //         .icon{
+            
+  //           #facebook_icon{
+  //             stroke: black;
+  //             stroke-width: 9;
+  //             &:hover{
+  //               stroke: blue;
+  //               fill: blue;
+  //             }
+  //           }
+  //           // 先設定stroke(邊框)顏色及粗細，然後再設定hover後的狀態
+  //           svg{
+  //             width: 24px;
+  //             transition: 0.5s ;
+  //             margin: 5px;
+  //             #path1,#path2,#path3{
+  //               fill:black
+  //             }
+  //             &:hover{
+  //               transition: 0.3s;
+  //               #path1{
+  //                 fill:url(#SVGID_1_);
+  //               }
+  //               #path2{
+  //                 fill:url(#SVGID_2_);
+  //               }
+  //               #path3{
+  //                 fill:url(#SVGID_3_);
+  //               }
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  //   .footer_btm{
+  //     padding: 30px 0;
+  //   }
+  // }
+}
