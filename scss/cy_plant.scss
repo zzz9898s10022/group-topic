@@ -54,8 +54,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-
-    padding: 5% 20%;
+    padding: 5% 0;
     @media (max-width: 1200px) {
       height: unset;
     }
@@ -75,14 +74,12 @@ body {
         align-items: center;
         background-image: url(../img/cy_calendar_L.jpg);
         @media (max-width: 1200px) {
-          // padding: 3% 5%;
           order: 3;
         }
         .note_box {
           flex-direction: column;
-          padding: 0 5% 10%;
+          padding: 10% 5%;
           h3 {
-            padding: 10% 0;
             color: white;
             align-self: center;
             font-size: 45px;
@@ -138,15 +135,46 @@ body {
       }
     }
   }
+
+  .sec_background_top {
+    width: 100%;
+    height: 50vh;
+    @media (max-width: 1200px) {
+      margin: unset;
+    }
+    .product_bg_L {
+      width: 50%;
+      height: 100%;
+      background-image: url(../img/product_bg_l.jpg);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    .product_bg_R {
+      width: 50%;
+      height: 100%;
+      background-image: url(../img/product_bg_r.jpg);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+  }
+
   .sec_container {
+    width: 100%;
+    height: 100vh;
+    padding: 3% 0;
     background-image: url(../img/background.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
     overflow-x: hidden;
+    flex-wrap: wrap;
+    @media (max-width: 1200px) {
+      height: unset;
+    }
     .sec_position_top_hidden {
       width: 100%;
-      height: 0;
       background-color: white;
       align-items: center;
       visibility: hidden;
@@ -168,39 +196,24 @@ body {
         font-size: 18px;
       }
     }
-    .sec_background_top {
-      width: 100%;
-      height: 50vh;
-      margin-bottom: 35vh;
-      @media (max-width: 1200px) {
-        margin: unset;
-      }
-      .product_bg_L {
-        width: 50%;
-        height: 100%;
-        background-image: url(../img/product_bg_l.jpg);
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-      }
-      .product_bg_R {
-        width: 50%;
-        height: 100%;
-        background-image: url(../img/product_bg_r.jpg);
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-      }
-    }
+
     .sec_position_btm {
-      width: 72%;
-      min-height: 50vh;
-      background-image: url(../img/plant.jpg);
-      background-position: center;
-      background-size: cover;
+      width: 100%;
+      min-height: 70vh;
       position: absolute;
-      top: 50vh;
+      top: 10vh;
       z-index: 1;
+      &::before {
+        content: "";
+        max-width: 135%;
+        width: 135%;
+        height: 70vh;
+        background-image: url(../img/plant.jpg);
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        right: 0;
+      }
       @media (max-width: 1200px) {
         width: 100%;
         order: 2;
@@ -209,16 +222,16 @@ body {
     }
     .sec_position_top {
       width: 25vw;
-      max-width: 300px;
-      min-width: 240px;
+      max-width: 320px;
+      min-width: 250px;
       height: 25vw;
-      max-height: 300px;
-      min-height: 240px;
+      max-height: 320px;
+      min-height: 250px;
       padding: 2% 0 0;
       background-color: white;
       position: absolute;
-      top: 51%;
-      right: 20%;
+      top: 30%;
+      right: 18%;
       // transform: translate(50%, -50%);
       align-items: center;
       z-index: 2;
@@ -257,9 +270,12 @@ body {
 
     .sec_background_btm {
       align-self: flex-end;
-      width: 80%;
-      height: 25vh;
+      height: 30vh;
       background-color: #172c14;
+      margin-left: auto;
+      position: absolute;
+      right: 0;
+      bottom: 10%;
       @media (max-width: 1200px) {
         display: none;
       }
@@ -268,19 +284,16 @@ body {
   .card_container {
     background-image: url(../img/background.jpg);
     background-size: cover;
-    padding: 0 5%;
   }
   .card_desk {
     width: 100%;
     padding: 10% 0;
     justify-content: space-around;
     .card {
-      width: 25%;
+      width: 30%;
       padding: 20px 0;
       background-color: #577e6c;
-      @media (max-width: 990px) {
-        width: 30%;
-      }
+
       @media (max-width: 768px) {
         width: 100%;
         margin: 10px 0;

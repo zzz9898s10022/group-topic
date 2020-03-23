@@ -49,18 +49,19 @@ body {
   }
 
   .calendar_container {
-    background-image: url(/img/background.jpg);
+    background-image: url(../img/background.jpg);
     background-size: cover;
     align-items: center;
     width: 100%;
     height: 100vh;
-    padding: 5% 5%;
+    padding: 5% 0;
     @media (max-width: 1200px) {
       height: unset;
     }
     .content {
       width: 100%;
       height: 100%;
+      padding: unset;
       @media (max-width: 1200px) {
         height: unset;
       }
@@ -71,7 +72,9 @@ body {
         height: 100%;
         justify-content: center;
         align-items: center;
-        background-image: url(/img/cy_calendar_L.jpg);
+        background-image: url(../img/cy_calendar_L.jpg);
+        background-position: center;
+        background-size: cover;
         @media (max-width: 1200px) {
           padding: 3% 5%;
           order: 3;
@@ -136,12 +139,43 @@ body {
       }
     }
   }
+  .sec_background_top {
+    width: 100%;
+    height: 50vh;
+    @media (max-width: 1200px) {
+      margin: unset;
+    }
+    .product_bg_L {
+      width: 50%;
+      height: 100%;
+      background-image: url(../img/sc_product_l.jpg);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    .product_bg_R {
+      width: 50%;
+      height: 100%;
+      background-image: url(../img/sc_product_r.jpg);
+      background-size: cover;
+      background-position:center;
+      background-attachment: fixed;
+    }
+  }
+  .container-fluid{
+    padding: unset;
+  }
   .sec_container {
-    background-image: url(/img/background.jpg);
+    width: 100%;
+    height: 100vh;
+    padding: 5% 0;
+    background-image: url(../img/background.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
     overflow-x: hidden;
+    justify-content: flex-end;
+
     .sec_position_top_hidden {
       width: 100%;
       height: 0;
@@ -164,32 +198,32 @@ body {
         font-size: 18px;
       }
     }
-    .sec_background_top {
-      width: 100%;
-      height: 50vh;
-      margin-bottom: 35vh;
+
+    .sec_position_top {
+      width: 25vw;
+      max-width: 320px;
+      min-width: 250px;
+      height: 25vw;
+      max-height: 320px;
+      min-height: 250px;
+      padding: 2% 0 0;
+      position: absolute;
+      top: 50%;
+      left: 8%;
+      // transform: translate(100%, 150%);
+      align-items: center;
+      z-index: 2;
+      img{
+        width: 100%;
+        height: 100%;
+      }
       @media (max-width: 1200px) {
-        margin: unset;
+        visibility: hidden;
       }
-      .product_bg_L {
-        width: 50%;
-        height: 100%;
-        background-image: url(../img/sc_product_l.jpg);
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-      }
-      .product_bg_R {
-        width: 50%;
-        height: 100%;
-        background-image: url(../img/sc_product_r.jpg);
-        background-size: cover;
-        background-position:center;
-        background-attachment: fixed;
-      }
+    
     }
     .sec_position_btm {
-      width: 80%;
+      width: 50%;
       min-height: 50vh;
       padding: 5% 15%;
       align-self:flex-end ;
@@ -221,58 +255,7 @@ body {
           padding: 0 5%;
         }
       }
-      .sec_position_top {
-        width: 25vw;
-        max-width: 300px;
-        min-width: 240px;
-        height: 25vw;
-        max-height: 300px;
-        min-height: 240px;
-        padding: 2% 0 0;
-        // background-image: url(../img/food1.jpg);
-        // background-position: center;
-        // background-size: cover;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translate(-50%, -50%);
-        align-items: center;
-        img{
-          width: 100%;
-          height: 100%;
-        }
-        @media (max-width: 1200px) {
-          visibility: hidden;
-        }
-        // .sec_position_top_title {
-        //   font-size: 28px;
-        //   color: #66c302;
-        //   @media (max-width: 1440px) {
-        //     font-size: 23px;
-        //   }
-        //   // @media (max-width: 960px) {
-        //   //   font-size: 23px;
-        //   // }
-        // }
-        // .sec_position_mid_title {
-        //   font-size: 16px;
-        //   color: darkslategray;
-        //   @media (max-width: 1440px) {
-        //     font-size: 14px;
-        //   }
-        //   // @media (max-width: 960px) {
-        //   //   font-size: 12px;
-        //   // }
-        // }
-        // .sec_position_btm_content {
-        //   padding: 3% 15%;
-        //   flex: 6;
-        //   font-size: 18px;
-        //   @media (max-width: 1280px) {
-        //     font-size: 15px;
-        //   }
-        // }
-      }
+ 
     }
     .sec_position_btm_hidden{
       display: none;
@@ -285,7 +268,7 @@ body {
     }
     .sec_background_btm {
       width: 70%;
-      height: 25vh;
+      height: 10vh;
       background-color: #9B9F8E;
       @media (max-width: 1200px) {
         display: none;

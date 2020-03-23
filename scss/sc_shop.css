@@ -64,14 +64,14 @@ body .banner .cy_logo {
 }
 
 body .calendar_container {
-  background-image: url(/img/background.jpg);
+  background-image: url(../img/background.jpg);
   background-size: cover;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
   height: 100vh;
-  padding: 5% 5%;
+  padding: 5% 0;
 }
 
 @media (max-width: 1200px) {
@@ -83,6 +83,7 @@ body .calendar_container {
 body .calendar_container .content {
   width: 100%;
   height: 100%;
+  padding: unset;
 }
 
 @media (max-width: 1200px) {
@@ -101,7 +102,9 @@ body .calendar_container .content .note {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url(/img/cy_calendar_L.jpg);
+  background-image: url(../img/cy_calendar_L.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 @media (max-width: 1200px) {
@@ -214,12 +217,51 @@ body .calendar_container .content .calendar .calendar_box img {
   width: 100%;
 }
 
+body .sec_background_top {
+  width: 100%;
+  height: 50vh;
+}
+
+@media (max-width: 1200px) {
+  body .sec_background_top {
+    margin: unset;
+  }
+}
+
+body .sec_background_top .product_bg_L {
+  width: 50%;
+  height: 100%;
+  background-image: url(../img/sc_product_l.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body .sec_background_top .product_bg_R {
+  width: 50%;
+  height: 100%;
+  background-image: url(../img/sc_product_r.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body .container-fluid {
+  padding: unset;
+}
+
 body .sec_container {
-  background-image: url(/img/background.jpg);
+  width: 100%;
+  height: 100vh;
+  padding: 5% 0;
+  background-image: url(../img/background.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
   overflow-x: hidden;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 body .sec_container .sec_position_top_hidden {
@@ -253,38 +295,36 @@ body .sec_container .sec_position_top_hidden .sec_position_btm_hidden_content {
   font-size: 18px;
 }
 
-body .sec_container .sec_background_top {
+body .sec_container .sec_position_top {
+  width: 25vw;
+  max-width: 320px;
+  min-width: 250px;
+  height: 25vw;
+  max-height: 320px;
+  min-height: 250px;
+  padding: 2% 0 0;
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+}
+
+body .sec_container .sec_position_top img {
   width: 100%;
-  height: 50vh;
-  margin-bottom: 35vh;
+  height: 100%;
 }
 
 @media (max-width: 1200px) {
-  body .sec_container .sec_background_top {
-    margin: unset;
+  body .sec_container .sec_position_top {
+    visibility: hidden;
   }
 }
 
-body .sec_container .sec_background_top .product_bg_L {
-  width: 50%;
-  height: 100%;
-  background-image: url(../img/sc_product_l.jpg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-body .sec_container .sec_background_top .product_bg_R {
-  width: 50%;
-  height: 100%;
-  background-image: url(../img/sc_product_r.jpg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
 body .sec_container .sec_position_btm {
-  width: 80%;
+  width: 50%;
   min-height: 50vh;
   padding: 5% 15%;
   -ms-flex-item-align: end;
@@ -327,35 +367,6 @@ body .sec_container .sec_position_btm span {
   }
 }
 
-body .sec_container .sec_position_btm .sec_position_top {
-  width: 25vw;
-  max-width: 300px;
-  min-width: 240px;
-  height: 25vw;
-  max-height: 300px;
-  min-height: 240px;
-  padding: 2% 0 0;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body .sec_container .sec_position_btm .sec_position_top img {
-  width: 100%;
-  height: 100%;
-}
-
-@media (max-width: 1200px) {
-  body .sec_container .sec_position_btm .sec_position_top {
-    visibility: hidden;
-  }
-}
-
 body .sec_container .sec_position_btm_hidden {
   display: none;
 }
@@ -372,7 +383,7 @@ body .sec_container .sec_position_btm_hidden img {
 
 body .sec_container .sec_background_btm {
   width: 70%;
-  height: 25vh;
+  height: 10vh;
   background-color: #9B9F8E;
 }
 
