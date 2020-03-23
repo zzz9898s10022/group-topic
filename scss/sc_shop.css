@@ -64,13 +64,15 @@ body .banner .cy_logo {
 }
 
 body .calendar_container {
-  background-image: url(../img/background.jpg);
+  background-image: url(../img/sc_bg.jpg);
   background-size: cover;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
-  height: 100vh;
   padding: 5% 0;
 }
 
@@ -82,8 +84,6 @@ body .calendar_container {
 
 body .calendar_container .content {
   width: 100%;
-  height: 100%;
-  padding: unset;
 }
 
 @media (max-width: 1200px) {
@@ -103,13 +103,10 @@ body .calendar_container .content .note {
       -ms-flex-align: center;
           align-items: center;
   background-image: url(../img/cy_calendar_L.jpg);
-  background-position: center;
-  background-size: cover;
 }
 
 @media (max-width: 1200px) {
   body .calendar_container .content .note {
-    padding: 3% 5%;
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
@@ -121,11 +118,10 @@ body .calendar_container .content .note .note_box {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0 5% 10%;
+  padding: 10% 5%;
 }
 
 body .calendar_container .content .note .note_box h3 {
-  padding: 5% 0;
   color: white;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -253,29 +249,35 @@ body .container-fluid {
 body .sec_container {
   width: 100%;
   height: 100vh;
-  padding: 5% 0;
-  background-image: url(../img/background.jpg);
+  padding: 3% 0;
+  background-image: url(../img/sc_bg.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
   overflow-x: hidden;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 1200px) {
+  body .sec_container {
+    height: unset;
+  }
 }
 
 body .sec_container .sec_position_top_hidden {
   width: 100%;
-  height: 0;
   background-color: white;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  visibility: hidden;
 }
 
 @media (max-width: 1200px) {
   body .sec_container .sec_position_top_hidden {
     height: unset;
+    visibility: visible;
   }
 }
 
@@ -295,6 +297,34 @@ body .sec_container .sec_position_top_hidden .sec_position_btm_hidden_content {
   font-size: 18px;
 }
 
+body .sec_container .sec_position_btm {
+  min-height: 70vh;
+  position: absolute;
+  top: 10vh;
+  z-index: 1;
+}
+
+body .sec_container .sec_position_btm::before {
+  content: "";
+  max-width: 135%;
+  width: 135%;
+  height: 60vh;
+  background-color: #414141;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+
+@media (max-width: 1200px) {
+  body .sec_container .sec_position_btm {
+    width: 100%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    position: unset;
+  }
+}
+
 body .sec_container .sec_position_top {
   width: 25vw;
   max-width: 320px;
@@ -302,10 +332,10 @@ body .sec_container .sec_position_top {
   height: 25vw;
   max-height: 320px;
   min-height: 250px;
-  padding: 2% 0 0;
+  padding: 1% 0;
   position: absolute;
-  top: 50%;
-  left: 8%;
+  top: 20%;
+  left: 10%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -323,47 +353,39 @@ body .sec_container .sec_position_top img {
   }
 }
 
-body .sec_container .sec_position_btm {
-  width: 50%;
-  min-height: 50vh;
-  padding: 5% 15%;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  background-color: #414141;
-  color: white;
-  position: absolute;
-  top: 50vh;
-  z-index: 1;
+body .sec_container .sec_position_top .sec_position_top_title {
+  font-size: 28px;
+  color: #66c302;
 }
 
-@media (max-width: 1200px) {
-  body .sec_container .sec_position_btm {
-    width: 100%;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    position: unset;
-    min-height: unset;
+@media (max-width: 1440px) {
+  body .sec_container .sec_position_top .sec_position_top_title {
+    font-size: 23px;
   }
 }
 
-body .sec_container .sec_position_btm h4 {
-  padding: 0 5%;
-  font-size: 28px;
+body .sec_container .sec_position_top .sec_position_mid_title {
+  font-size: 16px;
+  color: darkslategray;
 }
 
-body .sec_container .sec_position_btm p {
-  padding: 0 5%;
+@media (max-width: 1440px) {
+  body .sec_container .sec_position_top .sec_position_mid_title {
+    font-size: 14px;
+  }
+}
+
+body .sec_container .sec_position_top .sec_position_btm_content {
+  padding: 3% 15%;
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
   font-size: 18px;
 }
 
-body .sec_container .sec_position_btm span {
-  font-size: 16px;
-}
-
-@media (max-width: 1200px) {
-  body .sec_container .sec_position_btm span {
-    padding: 0 5%;
+@media (max-width: 1280px) {
+  body .sec_container .sec_position_top .sec_position_btm_content {
+    font-size: 15px;
   }
 }
 
@@ -382,19 +404,34 @@ body .sec_container .sec_position_btm_hidden img {
 }
 
 body .sec_container .sec_background_btm {
-  width: 70%;
-  height: 10vh;
-  background-color: #9B9F8E;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 100%;
+  height: 30vh;
+  position: absolute;
+  bottom: 12%;
+}
+
+body .sec_container .sec_background_btm::after {
+  content: "";
+  max-width: 135%;
+  width: 135%;
+  height: 30vh;
+  position: absolute;
+  background-color: #C0C8B9;
+  bottom: 12%;
+  right: 0;
+  z-index: 0;
 }
 
 @media (max-width: 1200px) {
-  body .sec_container .sec_background_btm {
+  body .sec_container .sec_background_btm::after {
     display: none;
   }
 }
 
 body .card_container {
-  background-image: url(../img/background.jpg);
+  background-image: url(../img/sc_bg.jpg);
   background-size: cover;
   padding: 0 5%;
 }
@@ -515,8 +552,7 @@ body .card_desk .card .card_link .line-B::before {
 
 body footer {
   width: 100%;
-  background-image: url(../img/footer_bg.jpg);
-  background-position: center;
+  background-color: #AAB2A2;
   padding: 3% 20%;
 }
 
@@ -527,6 +563,7 @@ body footer .footer_top {
 
 body footer .footer_top .logo {
   width: 30%;
+  margin-right: 10%;
 }
 
 body footer .footer_top .adress {
