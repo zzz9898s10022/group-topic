@@ -294,7 +294,6 @@ body .sec_container .sec_position_top_hidden .sec_position_btm_hidden_content {
 }
 
 body .sec_container .sec_position_btm {
-  width: 100%;
   min-height: 70vh;
   position: absolute;
   top: 10vh;
@@ -305,12 +304,13 @@ body .sec_container .sec_position_btm::before {
   content: "";
   max-width: 135%;
   width: 135%;
-  height: 70vh;
+  height: 60vh;
   background-image: url(../img/plant.jpg);
   background-position: center;
   background-size: cover;
   position: absolute;
   right: 0;
+  z-index: 1;
 }
 
 @media (max-width: 1200px) {
@@ -333,8 +333,8 @@ body .sec_container .sec_position_top {
   padding: 2% 0 0;
   background-color: white;
   position: absolute;
-  top: 30%;
-  right: 18%;
+  top: 25%;
+  right: 10%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -384,18 +384,24 @@ body .sec_container .sec_position_top .sec_position_btm_content {
 }
 
 body .sec_container .sec_background_btm {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  height: 30vh;
-  background-color: #172c14;
-  margin-left: auto;
   position: absolute;
-  right: 0;
+  bottom: 0;
+}
+
+body .sec_container .sec_background_btm::after {
+  content: "";
+  max-width: 135%;
+  width: 135%;
+  height: 30vh;
+  position: absolute;
+  background-color: #172c14;
   bottom: 10%;
+  left: 0;
+  z-index: 0;
 }
 
 @media (max-width: 1200px) {
-  body .sec_container .sec_background_btm {
+  body .sec_container .sec_background_btm::after {
     display: none;
   }
 }
