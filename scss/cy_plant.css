@@ -69,9 +69,11 @@ body .calendar_container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
-  height: 100vh;
-  padding: 5% 5%;
+  padding: 5% 20%;
 }
 
 @media (max-width: 1200px) {
@@ -80,9 +82,8 @@ body .calendar_container {
   }
 }
 
-body .calendar_container .content {
-  width: 100%;
-  height: 100%;
+body .calendar_container .container {
+  padding: unset;
 }
 
 @media (max-width: 1200px) {
@@ -106,7 +107,6 @@ body .calendar_container .content .note {
 
 @media (max-width: 1200px) {
   body .calendar_container .content .note {
-    padding: 3% 5%;
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
@@ -122,7 +122,7 @@ body .calendar_container .content .note .note_box {
 }
 
 body .calendar_container .content .note .note_box h3 {
-  padding: 5% 0;
+  padding: 10% 0;
   color: white;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -286,7 +286,7 @@ body .sec_container .sec_background_top .product_bg_R {
 }
 
 body .sec_container .sec_position_btm {
-  width: 80%;
+  width: 72%;
   min-height: 50vh;
   background-image: url(../img/plant.jpg);
   background-position: center;
@@ -306,7 +306,7 @@ body .sec_container .sec_position_btm {
   }
 }
 
-body .sec_container .sec_position_btm .sec_position_top {
+body .sec_container .sec_position_top {
   width: 25vw;
   max-width: 300px;
   min-width: 240px;
@@ -316,44 +316,43 @@ body .sec_container .sec_position_btm .sec_position_top {
   padding: 2% 0 0;
   background-color: white;
   position: absolute;
-  top: 50%;
-  right: 0;
-  -webkit-transform: translate(50%, -50%);
-          transform: translate(50%, -50%);
+  top: 51%;
+  right: 20%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 2;
 }
 
 @media (max-width: 1200px) {
-  body .sec_container .sec_position_btm .sec_position_top {
+  body .sec_container .sec_position_top {
     visibility: hidden;
   }
 }
 
-body .sec_container .sec_position_btm .sec_position_top .sec_position_top_title {
+body .sec_container .sec_position_top .sec_position_top_title {
   font-size: 28px;
   color: #66c302;
 }
 
 @media (max-width: 1440px) {
-  body .sec_container .sec_position_btm .sec_position_top .sec_position_top_title {
+  body .sec_container .sec_position_top .sec_position_top_title {
     font-size: 23px;
   }
 }
 
-body .sec_container .sec_position_btm .sec_position_top .sec_position_mid_title {
+body .sec_container .sec_position_top .sec_position_mid_title {
   font-size: 16px;
   color: darkslategray;
 }
 
 @media (max-width: 1440px) {
-  body .sec_container .sec_position_btm .sec_position_top .sec_position_mid_title {
+  body .sec_container .sec_position_top .sec_position_mid_title {
     font-size: 14px;
   }
 }
 
-body .sec_container .sec_position_btm .sec_position_top .sec_position_btm_content {
+body .sec_container .sec_position_top .sec_position_btm_content {
   padding: 3% 15%;
   -webkit-box-flex: 6;
       -ms-flex: 6;
@@ -362,7 +361,7 @@ body .sec_container .sec_position_btm .sec_position_top .sec_position_btm_conten
 }
 
 @media (max-width: 1280px) {
-  body .sec_container .sec_position_btm .sec_position_top .sec_position_btm_content {
+  body .sec_container .sec_position_top .sec_position_btm_content {
     font-size: 15px;
   }
 }
@@ -370,7 +369,7 @@ body .sec_container .sec_position_btm .sec_position_top .sec_position_btm_conten
 body .sec_container .sec_background_btm {
   -ms-flex-item-align: end;
       align-self: flex-end;
-  width: 70%;
+  width: 80%;
   height: 25vh;
   background-color: #172c14;
 }

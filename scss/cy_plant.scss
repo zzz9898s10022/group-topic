@@ -52,15 +52,17 @@ body {
     background-image: url(../img/background.jpg);
     background-size: cover;
     align-items: center;
+    justify-content: center;
     width: 100%;
-    height: 100vh;
-    padding: 5% 5%;
+
+    padding: 5% 20%;
     @media (max-width: 1200px) {
       height: unset;
     }
+    .container {
+      padding: unset;
+    }
     .content {
-      width: 100%;
-      height: 100%;
       @media (max-width: 1200px) {
         height: unset;
       }
@@ -73,14 +75,14 @@ body {
         align-items: center;
         background-image: url(../img/cy_calendar_L.jpg);
         @media (max-width: 1200px) {
-          padding: 3% 5%;
+          // padding: 3% 5%;
           order: 3;
         }
         .note_box {
           flex-direction: column;
           padding: 0 5% 10%;
           h3 {
-            padding: 5% 0;
+            padding: 10% 0;
             color: white;
             align-self: center;
             font-size: 45px;
@@ -191,7 +193,7 @@ body {
       }
     }
     .sec_position_btm {
-      width: 80%;
+      width: 72%;
       min-height: 50vh;
       background-image: url(../img/plant.jpg);
       background-position: center;
@@ -204,56 +206,58 @@ body {
         order: 2;
         position: unset;
       }
-      .sec_position_top {
-        width: 25vw;
-        max-width: 300px;
-        min-width: 240px;
-        height: 25vw;
-        max-height: 300px;
-        min-height: 240px;
-        padding: 2% 0 0;
-        background-color: white;
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translate(50%, -50%);
-        align-items: center;
-        @media (max-width: 1200px) {
-          visibility: hidden;
+    }
+    .sec_position_top {
+      width: 25vw;
+      max-width: 300px;
+      min-width: 240px;
+      height: 25vw;
+      max-height: 300px;
+      min-height: 240px;
+      padding: 2% 0 0;
+      background-color: white;
+      position: absolute;
+      top: 51%;
+      right: 20%;
+      // transform: translate(50%, -50%);
+      align-items: center;
+      z-index: 2;
+      @media (max-width: 1200px) {
+        visibility: hidden;
+      }
+      .sec_position_top_title {
+        font-size: 28px;
+        color: #66c302;
+        @media (max-width: 1440px) {
+          font-size: 23px;
         }
-        .sec_position_top_title {
-          font-size: 28px;
-          color: #66c302;
-          @media (max-width: 1440px) {
-            font-size: 23px;
-          }
-          // @media (max-width: 960px) {
-          //   font-size: 23px;
-          // }
+        // @media (max-width: 960px) {
+        //   font-size: 23px;
+        // }
+      }
+      .sec_position_mid_title {
+        font-size: 16px;
+        color: darkslategray;
+        @media (max-width: 1440px) {
+          font-size: 14px;
         }
-        .sec_position_mid_title {
-          font-size: 16px;
-          color: darkslategray;
-          @media (max-width: 1440px) {
-            font-size: 14px;
-          }
-          // @media (max-width: 960px) {
-          //   font-size: 12px;
-          // }
-        }
-        .sec_position_btm_content {
-          padding: 3% 15%;
-          flex: 6;
-          font-size: 18px;
-          @media (max-width: 1280px) {
-            font-size: 15px;
-          }
+        // @media (max-width: 960px) {
+        //   font-size: 12px;
+        // }
+      }
+      .sec_position_btm_content {
+        padding: 3% 15%;
+        flex: 6;
+        font-size: 18px;
+        @media (max-width: 1280px) {
+          font-size: 15px;
         }
       }
     }
+
     .sec_background_btm {
       align-self: flex-end;
-      width: 70%;
+      width: 80%;
       height: 25vh;
       background-color: #172c14;
       @media (max-width: 1200px) {
