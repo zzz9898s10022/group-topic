@@ -24,19 +24,19 @@ body {
     ul {
       padding: 10px;
       a {
-        font-size: 28px;
+        font-size: 30px;
         color: #270501;
         transition: 0.5s;
 
         @media (max-width: 960px) {
-          font-size: 24px;
-        }
-        @media (max-width: 768px) {
           font-size: 20px;
         }
-        @media (max-width: 650px) {
+        @media (max-width: 768px) {
           font-size: 16px;
         }
+        // @media (max-width: 650px) {
+        //   font-size: 16px;
+        // }
         &:hover {
           color: crimson;
         }
@@ -83,35 +83,20 @@ body {
           h3 {
             color: white;
             align-self: center;
-            font-size: 45px;
-            @media (max-width: 1440px) {
-              font-size: 43px;
-            }
+            font-size: 30px;
             @media (max-width: 1200px) {
-              padding: 3% 0 0;
-            }
-            @media (max-width: 1024px) {
-              font-size: 41px;
-            }
-            @media (max-width: 768px) {
-              font-size: 39px;
+            padding: 3% 0 0;
             }
           }
           li {
             padding: 0 5%;
             color: white;
-            font-size: 22px;
+            font-size: 20px;
             @media (max-width: 1440px) {
               font-size: 20px;
             }
             @media (max-width: 1200px) {
               padding: 2px 0;
-            }
-            @media (max-width: 1024px) {
-              font-size: 18px;
-            }
-            @media (max-width: 768px) {
-              font-size: 16px;
             }
           }
         }
@@ -185,10 +170,12 @@ body {
       z-index: 1;
       .sec_position_btm_list {
         background-color: #414141;
-        &:nth-child(2) div {
-          padding: 65px 30px 30px 150px;
-          @media (max-width: 1200px) {
-            padding: 65px;
+        div {
+          &:nth-child(1) {
+            padding: 65px 30px 30px 150px;
+            @media (max-width: 1200px) {
+              padding: 65px 0 0 35px;
+            }
           }
         }
         .sec_position_btm_list_photo {
@@ -197,29 +184,27 @@ body {
           z-index: 3;
           transform: translate(-80%, -50%);
           padding: unset;
-          img {
-            width: 320px;
-            height: 320px;
-            @media (max-width:1200px){
-              width: 250px;
-              height: 250px;
-            }
-            @media (max-width:960px){
-              width: 200px;
-              height: 200px;
-            }
-          }
           @media (max-width: 1200px) {
-            top: 0;
-            right: 0;
+            position: unset;
+            padding-top: 65px;
             transform: translate(-25%, 0);
             width: 300px;
           }
           @media (max-width: 960px) {
-            top: 0;
-            right: 0;
             transform: translate(-5%, 0);
             width: 300px;
+          }
+          img {
+            width: 320px;
+            height: 320px;
+            @media (max-width: 1200px) {
+              width: 250px;
+              height: 250px;
+            }
+            @media (max-width: 960px) {
+              width: 200px;
+              height: 200px;
+            }
           }
         }
       }
@@ -277,38 +262,7 @@ body {
       @media (max-width: 1200px) {
         visibility: hidden;
       }
-      .sec_position_top_title {
-        font-size: 28px;
-        color: #66c302;
-        @media (max-width: 1440px) {
-          font-size: 23px;
-        }
-      }
-      .sec_position_mid_title {
-        font-size: 16px;
-        color: darkslategray;
-        @media (max-width: 1440px) {
-          font-size: 14px;
-        }
-      }
-      .sec_position_btm_content {
-        padding: 3% 15%;
-        flex: 6;
-        font-size: 18px;
-        @media (max-width: 1280px) {
-          font-size: 15px;
-        }
-      }
     }
-    // .sec_position_btm_hidden {
-    //   display: none;
-    //   img {
-    //     width: 100%;
-    //   }
-    //   @media (max-width: 1200px) {
-    //     display: block;
-    //   }
-    // }
     .sec_background_btm {
       align-self: flex-end;
       width: 100%;
@@ -355,12 +309,13 @@ body {
       }
       .card_title {
         color: #193150;
-        font-size: xx-large;
+        font-size: 30px;
         padding: 5% 10%;
         margin: auto;
       }
       .card_text {
         color: #045658;
+        font-size: 20px;
         padding: 5% 10% 20%;
         margin: auto;
       }
@@ -402,6 +357,7 @@ body {
         }
         div {
           color: #270501;
+          font-size: 20px;
         }
         .line-B {
           height: 2px;

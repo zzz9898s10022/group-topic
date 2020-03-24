@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  list-style: none;
+}
+
+body header {
+  width: 100%;
+  background-color: #D4CB00;
+}
+
+body main {
+  width: 100%;
+  background-color: #5E7467;
+}
+
+body main .main_line {
+  margin-left: auto;
+  width: 70%;
+  border-top: 3px white solid;
+}
+
+body main .cards {
+  width: 100%;
+  padding: 65px 0;
+}
+
+body main .cards .card {
+  background-color: #5E7467;
+}
+
+body main .cards .card .card_title {
+  font-size: 20px;
+}
+
+body main .cards .card .card_price {
+  color: white;
+  font-size: 20px;
+}
+/*# sourceMappingURL=cy_product.css.map */

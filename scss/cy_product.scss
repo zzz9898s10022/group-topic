@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  list-style: none;
+header{
+    width: 100%;
+    background-color: #D4CB00;
+}
+  main {
+    width: 100%;
+    background-color: #5E7467;
+    .main_line {
+      margin-left: auto;
+      width: 70%;
+      border-top: 3px white solid;
+    }
+    .cards{
+        width: 100%;
+        padding: 65px 0;
+        
+        .card{
+            background-color: #5E7467;
+            .card_title{
+                font-size: 20px;
+            }
+            .card_price{
+                color: white;
+                font-size: 20px;
+            }
+            
+        }
+    }
+  }
+}
