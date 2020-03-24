@@ -73,6 +73,7 @@ body {
         justify-content: center;
         align-items: center;
         background-image: url(../img/cy_calendar_L.jpg);
+        background-size: cover;
         @media (max-width: 1200px) {
           order: 3;
         }
@@ -135,7 +136,7 @@ body {
       }
     }
   }
-  
+
   .sec_background_top {
     width: 100%;
     height: 50vh;
@@ -170,66 +171,85 @@ body {
     background-size: cover;
     background-position: center;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
     flex-wrap: wrap;
     @media (max-width: 1200px) {
       height: unset;
     }
-    .sec_position_top_hidden {
-      width: 100%;
-      background-color: white;
-      align-items: center;
-      visibility: hidden;
-      @media (max-width: 1200px) {
-        height: unset;
-        visibility: visible;
-      }
-      .sec_position_top_hidden_title {
-        font-size: 28px;
-        color: #66c302;
-      }
-      .sec_position_mid_hidden_title {
-        font-size: 16px;
-        padding: 10px 0 0;
-        color: darkslategray;
-      }
-      .sec_position_btm_hidden_content {
-        padding: 3% 10%;
-        font-size: 18px;
-      }
-    }
-
     .sec_position_btm {
-      // width: 100%;
-      min-height: 70vh;
+      width: 100%;
+      min-height: 60vh;
+      color: white;
       position: absolute;
       top: 10vh;
       z-index: 1;
-     
-      &::before {
-        content: "";
-        max-width: 135%;
-        width: 135%;
-        height: 60vh;
-        background-color:#414141 ;
-        position: absolute;
-        left: 0;
-        z-index: 1;
+      .sec_position_btm_list {
+        background-color: #414141;
+        &:nth-child(2) div {
+          padding: 65px 30px 30px 150px;
+          @media (max-width: 1200px) {
+            padding: 65px;
+          }
+        }
+        .sec_position_btm_list_photo {
+          position: absolute;
+          top: 50%;
+          z-index: 3;
+          transform: translate(-80%, -50%);
+          padding: unset;
+          img {
+            width: 320px;
+            height: 320px;
+            @media (max-width:1200px){
+              width: 250px;
+              height: 250px;
+            }
+            @media (max-width:960px){
+              width: 200px;
+              height: 200px;
+            }
+          }
+          @media (max-width: 1200px) {
+            top: 0;
+            right: 0;
+            transform: translate(-25%, 0);
+            width: 300px;
+          }
+          @media (max-width: 960px) {
+            top: 0;
+            right: 0;
+            transform: translate(-5%, 0);
+            width: 300px;
+          }
+        }
       }
-      // &::after {
+
+      // @media(max-width:1200px) {
+      //   position: relative;
+      // }
+      // &::before {
       //   content: "";
+      //   color: white;
       //   max-width: 135%;
       //   width: 135%;
-      //   height: 30vh;
+      //   height: 60vh;
+      //   background-color:#414141 ;
       //   position: absolute;
-      //   background-color: #172c14;
-      //   bottom: 10%;
       //   left: 0;
-      //   z-index: 0;
-      //   @media (max-width: 1200px) {
-      //     display: none;
-      //   }
+      //   z-index: 1;
       // }
+      &::after {
+        content: "";
+        width: 70%;
+        height: 100%;
+        position: absolute;
+        background-color: #414141;
+        right: 0;
+        bottom: 0;
+        transform: translate(50%, 0);
+        z-index: -1;
+      }
+
       @media (max-width: 1200px) {
         width: 100%;
         order: 2;
@@ -244,13 +264,13 @@ body {
       height: 25vw;
       max-height: 320px;
       min-height: 250px;
-      padding: 1% 0 ;
+      padding: 1% 0;
       position: absolute;
       top: 20%;
       left: 10%;
       align-items: center;
       z-index: 2;
-      img{
+      img {
         width: 100%;
         height: 100%;
       }
@@ -280,15 +300,15 @@ body {
         }
       }
     }
-    .sec_position_btm_hidden {
-          display: none;
-          img {
-            width: 100%;
-          }
-          @media (max-width: 1200px) {
-            display: block;
-          }
-        }
+    // .sec_position_btm_hidden {
+    //   display: none;
+    //   img {
+    //     width: 100%;
+    //   }
+    //   @media (max-width: 1200px) {
+    //     display: block;
+    //   }
+    // }
     .sec_background_btm {
       align-self: flex-end;
       width: 100%;
@@ -302,7 +322,7 @@ body {
         width: 135%;
         height: 30vh;
         position: absolute;
-        background-color: #C0C8B9;
+        background-color: #c0c8b9;
         bottom: 12%;
         right: 0;
         z-index: 0;
@@ -312,114 +332,7 @@ body {
       }
     }
   }
-  // .sec_container {
-  //   width: 100%;
-  //   height: 100vh;
-  //   padding: 5% 0;
-  //   background-image: url(../img/sc_bg.jpg);
-  //   background-size: cover;
-  //   background-position: center;
-  //   position: relative;
-  //   overflow-x: hidden;
-  //   justify-content: flex-end;
 
-  //   .sec_position_top_hidden {
-  //     width: 100%;
-  //     height: 0;
-  //     background-color: white;
-  //     align-items: center;
-  //     @media (max-width: 1200px) {
-  //       height: unset;
-  //     }
-  //     .sec_position_top_hidden_title {
-  //       font-size: 28px;
-  //       color: #66c302;
-  //     }
-  //     .sec_position_mid_hidden_title {
-  //       font-size: 16px;
-  //       padding: 10px 0 0;
-  //       color: darkslategray;
-  //     }
-  //     .sec_position_btm_hidden_content {
-  //       padding: 3% 10%;
-  //       font-size: 18px;
-  //     }
-  //   }
-
-  //   .sec_position_top {
-  //     width: 25vw;
-  //     max-width: 320px;
-  //     min-width: 250px;
-  //     height: 25vw;
-  //     max-height: 320px;
-  //     min-height: 250px;
-  //     padding: 2% 0 0;
-  //     position: absolute;
-  //     top: 50%;
-  //     left: 8%;
-  //     // transform: translate(100%, 150%);
-  //     align-items: center;
-  //     z-index: 2;
-  //     img {
-  //       width: 100%;
-  //       height: 100%;
-  //     }
-  //     @media (max-width: 1200px) {
-  //       visibility: hidden;
-  //     }
-  //   }
-  //   .sec_position_btm {
-  //     width: 50%;
-  //     min-height: 50vh;
-  //     padding: 5% 15%;
-  //     align-self: flex-end;
-  //     background-color: #414141;
-  //     color: white;
-  //     // background-image: url(../img/plant.jpg);
-  //     // background-position: center;
-  //     // background-size: cover;
-  //     position: absolute;
-  //     top: 50vh;
-  //     z-index: 1;
-  //     @media (max-width: 1200px) {
-  //       width: 100%;
-  //       order: 2;
-  //       position: unset;
-  //       min-height: unset;
-  //     }
-  //     h4 {
-  //       padding: 0 5%;
-  //       font-size: 28px;
-  //     }
-  //     p {
-  //       padding: 0 5%;
-  //       font-size: 18px;
-  //     }
-  //     span {
-  //       font-size: 16px;
-  //       @media (max-width: 1200px) {
-  //         padding: 0 5%;
-  //       }
-  //     }
-  //   }
-  //   .sec_position_btm_hidden {
-  //     display: none;
-  //     img {
-  //       width: 100%;
-  //     }
-  //     @media (max-width: 1200px) {
-  //       display: block;
-  //     }
-  //   }
-  //   .sec_background_btm {
-  //     width: 70%;
-  //     height: 10vh;
-  //     background-color: #9b9f8e;
-  //     @media (max-width: 1200px) {
-  //       display: none;
-  //     }
-  //   }
-  // }
   .card_container {
     background-image: url(../img/sc_bg.jpg);
     background-size: cover;
@@ -511,7 +424,7 @@ body {
 
   footer {
     width: 100%;
-    background-color: #AAB2A2;
+    background-color: #454d39;
     padding: 3% 20%;
     .footer_top {
       width: 100%;

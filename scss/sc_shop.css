@@ -103,6 +103,7 @@ body .calendar_container .content .note {
       -ms-flex-align: center;
           align-items: center;
   background-image: url(../img/cy_calendar_L.jpg);
+  background-size: cover;
 }
 
 @media (max-width: 1200px) {
@@ -254,7 +255,7 @@ body .sec_container {
   background-size: cover;
   background-position: center;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -265,54 +266,88 @@ body .sec_container {
   }
 }
 
-body .sec_container .sec_position_top_hidden {
-  width: 100%;
-  background-color: white;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  visibility: hidden;
-}
-
-@media (max-width: 1200px) {
-  body .sec_container .sec_position_top_hidden {
-    height: unset;
-    visibility: visible;
-  }
-}
-
-body .sec_container .sec_position_top_hidden .sec_position_top_hidden_title {
-  font-size: 28px;
-  color: #66c302;
-}
-
-body .sec_container .sec_position_top_hidden .sec_position_mid_hidden_title {
-  font-size: 16px;
-  padding: 10px 0 0;
-  color: darkslategray;
-}
-
-body .sec_container .sec_position_top_hidden .sec_position_btm_hidden_content {
-  padding: 3% 10%;
-  font-size: 18px;
-}
-
 body .sec_container .sec_position_btm {
-  min-height: 70vh;
+  width: 100%;
+  min-height: 60vh;
+  color: white;
   position: absolute;
   top: 10vh;
   z-index: 1;
 }
 
-body .sec_container .sec_position_btm::before {
-  content: "";
-  max-width: 135%;
-  width: 135%;
-  height: 60vh;
+body .sec_container .sec_position_btm .sec_position_btm_list {
   background-color: #414141;
+}
+
+body .sec_container .sec_position_btm .sec_position_btm_list:nth-child(2) div {
+  padding: 65px 30px 30px 150px;
+}
+
+@media (max-width: 1200px) {
+  body .sec_container .sec_position_btm .sec_position_btm_list:nth-child(2) div {
+    padding: 65px;
+  }
+}
+
+body .sec_container .sec_position_btm .sec_position_btm_list .sec_position_btm_list_photo {
   position: absolute;
-  left: 0;
-  z-index: 1;
+  top: 50%;
+  z-index: 3;
+  -webkit-transform: translate(-80%, -50%);
+          transform: translate(-80%, -50%);
+  padding: unset;
+}
+
+body .sec_container .sec_position_btm .sec_position_btm_list .sec_position_btm_list_photo img {
+  width: 320px;
+  height: 320px;
+}
+
+@media (max-width: 1200px) {
+  body .sec_container .sec_position_btm .sec_position_btm_list .sec_position_btm_list_photo img {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 960px) {
+  body .sec_container .sec_position_btm .sec_position_btm_list .sec_position_btm_list_photo img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 1200px) {
+  body .sec_container .sec_position_btm .sec_position_btm_list .sec_position_btm_list_photo {
+    top: 0;
+    right: 0;
+    -webkit-transform: translate(-25%, 0);
+            transform: translate(-25%, 0);
+    width: 300px;
+  }
+}
+
+@media (max-width: 960px) {
+  body .sec_container .sec_position_btm .sec_position_btm_list .sec_position_btm_list_photo {
+    top: 0;
+    right: 0;
+    -webkit-transform: translate(-5%, 0);
+            transform: translate(-5%, 0);
+    width: 300px;
+  }
+}
+
+body .sec_container .sec_position_btm::after {
+  content: "";
+  width: 70%;
+  height: 100%;
+  position: absolute;
+  background-color: #414141;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+  z-index: -1;
 }
 
 @media (max-width: 1200px) {
@@ -389,20 +424,6 @@ body .sec_container .sec_position_top .sec_position_btm_content {
   }
 }
 
-body .sec_container .sec_position_btm_hidden {
-  display: none;
-}
-
-body .sec_container .sec_position_btm_hidden img {
-  width: 100%;
-}
-
-@media (max-width: 1200px) {
-  body .sec_container .sec_position_btm_hidden {
-    display: block;
-  }
-}
-
 body .sec_container .sec_background_btm {
   -ms-flex-item-align: end;
       align-self: flex-end;
@@ -418,7 +439,7 @@ body .sec_container .sec_background_btm::after {
   width: 135%;
   height: 30vh;
   position: absolute;
-  background-color: #C0C8B9;
+  background-color: #c0c8b9;
   bottom: 12%;
   right: 0;
   z-index: 0;
@@ -552,7 +573,7 @@ body .card_desk .card .card_link .line-B::before {
 
 body footer {
   width: 100%;
-  background-color: #AAB2A2;
+  background-color: #454d39;
   padding: 3% 20%;
 }
 
