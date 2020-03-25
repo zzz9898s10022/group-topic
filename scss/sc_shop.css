@@ -5,7 +5,7 @@ html {
 body {
   margin: 0;
   list-style: none;
-  font-family: "CWTEXFANGSONG";
+  font-family: "Microsoft JhengHei";
 }
 
 body .box-shadow {
@@ -18,164 +18,189 @@ body .drop-shadow {
           filter: drop-shadow(0 12px 3px rgba(0, 0, 0, 0.6));
 }
 
-body .banner {
-  height: 100vh;
-  background-image: url(../img/sc_banner.jpg);
-  background-size: cover;
-  padding: 0 5%;
+body header .navbar {
+  background-color: #414141;
 }
 
-body .banner ul {
-  padding: 10px;
+@media (max-width: 1000px) {
+  body header .navbar .nav_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
-body .banner ul a {
+@media (max-width: 1000px) {
+  body header .navbar .nav_container .nav-item {
+    display: none;
+  }
+}
+
+body header .navbar .nav_container a {
   font-size: 30px;
-  color: #270501;
+  color: white;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 @media (max-width: 960px) {
-  body .banner ul a {
+  body header .navbar .nav_container a {
     font-size: 20px;
   }
 }
 
 @media (max-width: 768px) {
-  body .banner ul a {
+  body header .navbar .nav_container a {
     font-size: 16px;
   }
 }
 
-body .banner ul a:hover {
-  color: crimson;
+body header .navbar .nav_container a:hover {
+  color: #806029;
 }
 
-body .banner .cy_logo {
-  padding: 5% 0 10%;
+body header .navbar .nav_container a .cy_logo {
+  padding: 15% 0;
   width: 100%;
 }
 
-body .calendar_container {
-  background-image: url(../img/sc_bg.jpg);
+body header .banner {
+  height: 80vh;
+  background-image: url(../img/sc_banner.jpg);
   background-size: cover;
+  background-position: center;
+  padding: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  padding: 5% 0;
 }
 
-@media (max-width: 1200px) {
-  body .calendar_container {
-    height: unset;
-  }
+body header .banner .calendar_container {
+  -webkit-transform: translate(0, 20%);
+          transform: translate(0, 20%);
 }
 
-body .calendar_container .content {
-  width: 100%;
-}
-
-@media (max-width: 1200px) {
-  body .calendar_container .content {
-    height: unset;
-  }
-}
-
-body .calendar_container .content .note {
+body header .banner .calendar_container .calendar {
   width: 50%;
-  min-width: 300px;
-  height: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-image: url(../img/cy_calendar_L.jpg);
-  background-size: cover;
 }
 
-@media (max-width: 1200px) {
-  body .calendar_container .content .note {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-  }
+body header .banner .calendar_container .calendar img {
+  width: 100%;
 }
 
-body .calendar_container .content .note .note_box {
+body .news_container {
+  width: 100%;
+  background-color: #f6d498;
+}
+
+body .news_container .news_content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 10% 5%;
-}
-
-body .calendar_container .content .note .note_box h3 {
-  color: white;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  font-size: 30px;
-}
-
-@media (max-width: 1200px) {
-  body .calendar_container .content .note .note_box h3 {
-    padding: 3% 0 0;
-  }
-}
-
-body .calendar_container .content .note .note_box li {
-  padding: 0 5%;
-  color: white;
-  font-size: 20px;
-}
-
-@media (max-width: 1440px) {
-  body .calendar_container .content .note .note_box li {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 1200px) {
-  body .calendar_container .content .note .note_box li {
-    padding: 2px 0;
-  }
-}
-
-body .calendar_container .content .calendar {
-  width: 50%;
-  background-color: #5e7467;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-@media (max-width: 1200px) {
-  body .calendar_container .content .calendar {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
+body .news_container .news_content .news_title {
+  font-size: 30px;
+  padding: 5% 0;
 }
 
-body .calendar_container .content .calendar .calendar_box {
+body .news_container .news_content .news_list {
+  color: #806029;
+  font-size: 20px;
+  border-bottom: 2px #806029 solid;
+  letter-spacing: 10px;
+}
+
+body .news_container .news_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 20px;
+  padding: 5% 0;
+}
+
+body .news_container .news_link:hover .line-T::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+body .news_container .news_link:hover .line-B::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+body .news_container .news_link .line-T {
+  height: 2px;
+  width: 80px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+body .news_container .news_link .line-T::before {
+  content: "";
+  display: block;
   width: 100%;
+  height: 100%;
+  background-color: #270501;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transform-origin: left;
+          transform-origin: left;
 }
 
-@media (max-width: 1200px) {
-  body .calendar_container .content .calendar .calendar_box {
-    padding: 10% 5%;
-  }
+body .news_container .news_link div {
+  color: #270501;
+  font-size: 20px;
 }
 
-body .calendar_container .content .calendar .calendar_box img {
+body .news_container .news_link .line-B {
+  height: 2px;
+  width: 80px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+body .news_container .news_link .line-B::before {
+  content: "";
+  display: block;
   width: 100%;
+  height: 100%;
+  background-color: #270501;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transform-origin: right;
+          transform-origin: right;
 }
 
 body .sec_background_top {
@@ -189,21 +214,12 @@ body .sec_background_top {
   }
 }
 
-body .sec_background_top .product_bg_L {
-  width: 50%;
+body .sec_background_top .product_bg_T {
+  width: 100%;
   height: 100%;
   background-image: url(../img/sc_product_l.jpg);
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-body .sec_background_top .product_bg_R {
-  width: 50%;
-  height: 100%;
-  background-image: url(../img/sc_product_r.jpg);
-  background-size: cover;
-  background-position: center;
+  background-position: bottom;
   background-attachment: fixed;
 }
 
@@ -214,10 +230,7 @@ body .container-fluid {
 body .sec_container {
   width: 100%;
   height: 100vh;
-  padding: 3% 0;
-  background-image: url(../img/sc_bg.jpg);
-  background-size: cover;
-  background-position: center;
+  background-color: #f6d498;
   position: relative;
   overflow: hidden;
   -ms-flex-wrap: wrap;
@@ -233,14 +246,14 @@ body .sec_container {
 body .sec_container .sec_position_btm {
   width: 100%;
   min-height: 60vh;
-  color: white;
+  color: #ffbf52;
   position: absolute;
-  top: 10vh;
+  top: 20vh;
   z-index: 1;
 }
 
 body .sec_container .sec_position_btm .sec_position_btm_list {
-  background-color: #414141;
+  background-color: #56380c;
 }
 
 body .sec_container .sec_position_btm .sec_position_btm_list div:nth-child(1) {
@@ -251,6 +264,11 @@ body .sec_container .sec_position_btm .sec_position_btm_list div:nth-child(1) {
   body .sec_container .sec_position_btm .sec_position_btm_list div:nth-child(1) {
     padding: 65px 0 0 35px;
   }
+}
+
+body .sec_container .sec_position_btm .sec_position_btm_list div:nth-child(1) p,
+body .sec_container .sec_position_btm .sec_position_btm_list div:nth-child(1) span {
+  color: #ccb07e;
 }
 
 body .sec_container .sec_position_btm .sec_position_btm_list .sec_position_btm_list_photo {
@@ -304,7 +322,7 @@ body .sec_container .sec_position_btm::after {
   width: 70%;
   height: 100%;
   position: absolute;
-  background-color: #414141;
+  background-color: #56380c;
   right: 0;
   bottom: 0;
   -webkit-transform: translate(50%, 0);
@@ -350,35 +368,28 @@ body .sec_container .sec_position_top img {
   }
 }
 
-body .sec_container .sec_background_btm {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+body .sec_background_btm {
   width: 100%;
-  height: 30vh;
-  position: absolute;
-  bottom: 12%;
-}
-
-body .sec_container .sec_background_btm::after {
-  content: "";
-  max-width: 135%;
-  width: 135%;
-  height: 30vh;
-  position: absolute;
-  background-color: #c0c8b9;
-  bottom: 12%;
-  right: 0;
-  z-index: 0;
+  height: 50vh;
 }
 
 @media (max-width: 1200px) {
-  body .sec_container .sec_background_btm::after {
-    display: none;
+  body .sec_background_btm {
+    margin: unset;
   }
 }
 
+body .sec_background_btm .product_bg_B {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/sc_product_r.jpg);
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+}
+
 body .card_container {
-  background-image: url(../img/sc_bg.jpg);
+  background-color: #f6d498;
   background-size: cover;
   padding: 0 5%;
 }
