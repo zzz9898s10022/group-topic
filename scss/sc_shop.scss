@@ -5,6 +5,7 @@ body {
   margin: 0;
   list-style: none;
   font-family: "Microsoft JhengHei";
+  position: relative;
 
   //------------------------------此區可對物品添加陰影
   .box-shadow {
@@ -18,6 +19,20 @@ body {
     .navbar {
       background-color: #414141;
       .nav_container {
+        position: relative;
+        svg {
+          width: 30px;
+          fill: white;
+          display: none;
+          @media (max-width: 1000px) {
+            display: block;
+            content: "";
+            position: absolute;
+            // transform: translate(0, -50%);
+            right:0;
+            top: 0;
+          }
+        }
         @media (max-width: 1000px) {
           display: flex;
           justify-content: center;
@@ -190,7 +205,7 @@ body {
       z-index: 1;
       .sec_position_btm_list {
         background-color: #56380c;
-
+        position: relative;
         div {
           &:nth-child(1) {
             padding: 65px 30px 30px 150px;
@@ -199,7 +214,7 @@ body {
             }
             p,
             span {
-              color: #ccb07e;
+              color: #ccb07e;              
             }
           }
         }
@@ -326,92 +341,185 @@ body {
       background-attachment: fixed;
     }
   }
-  .card_container {
-    background-color: #f6d498;
-    background-size: cover;
-    padding: 0 5%;
-  }
-  .card_desk {
+  // .card_container {
+  //   background-color: #f6d498;
+  //   background-size: cover;
+  //   padding: 0 5%;
+  //   position: relative;
+  // }
+  // .card_desk {
+  //   width: 100%;
+  //   padding: 10% 0;
+  //   justify-content: space-around;
+
+  //   .card {
+  //     width: 25%;
+  //     padding: 20px 0;
+  //     background-color: #97b6d4;
+  //     @media (max-width: 990px) {
+  //       width: 30%;
+  //     }
+  //     @media (max-width: 768px) {
+  //       width: 100%;
+  //       margin: 10px 0;
+  //     }
+  //     .card_title {
+  //       color: #193150;
+  //       font-size: 30px;
+  //       padding: 5% 10%;
+  //       margin: auto;
+  //     }
+  //     .card_text {
+  //       color: #045658;
+  //       font-size: 20px;
+  //       padding: 5% 10% 20%;
+  //       margin: auto;
+  //     }
+
+  //     .card_link {
+  //       display: flex;
+  //       flex-direction: column;
+  //       align-items: center;
+
+  //       &:hover {
+  //         .line-T {
+  //           &::before {
+  //             transform: scaleX(1);
+  //             transform-origin: right;
+  //           }
+  //         }
+  //         .line-B {
+  //           &::before {
+  //             transform: scaleX(1);
+  //             transform-origin: left;
+  //           }
+  //         }
+  //       }
+
+  //       .line-T {
+  //         height: 2px;
+  //         width: 70px;
+  //         background-color: rgba(0, 0, 0, 0.2);
+  //         &::before {
+  //           content: "";
+  //           display: block;
+  //           width: 100%;
+  //           height: 100%;
+  //           background-color: #270501;
+  //           transform: scaleX(0);
+  //           transition: transform 0.3s;
+  //           transform-origin: left;
+  //         }
+  //       }
+  //       div {
+  //         color: #270501;
+  //         font-size: 20px;
+  //       }
+  //       .line-B {
+  //         height: 2px;
+  //         width: 70px;
+  //         background-color: rgba(0, 0, 0, 0.2);
+  //         &::before {
+  //           content: "";
+  //           display: block;
+  //           width: 100%;
+  //           height: 100%;
+  //           background-color: #270501;
+  //           transform: scaleX(0);
+  //           transition: transform 0.3s;
+  //           transform-origin: right;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  .swiper-container {
     width: 100%;
-    padding: 10% 0;
-    justify-content: space-around;
-    
-    .card {
-      width: 25%;
-      padding: 20px 0;
-      background-color: #97b6d4;
-      @media (max-width: 990px) {
-        width: 30%;
-      }
-      @media (max-width: 768px) {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f6d498;
+    .swiper_title{
+      font-size: 30px;
+      color: #56380c;
+      padding: 3% 0;
+    }
+    .swiper-slide {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 3%;
+      .card {
         width: 100%;
-        margin: 10px 0;
-      }
-      .card_title {
-        color: #193150;
-        font-size: 30px;
-        padding: 5% 10%;
-        margin: auto;
-      }
-      .card_text {
-        color: #045658;
-        font-size: 20px;
-        padding: 5% 10% 20%;
-        margin: auto;
-      }
+        background-color: #56380c;
+        .card_title {
+          color: #ffbf52;
+          font-size: 30px;
+          padding: 5% 10%;
+          margin: auto;
+        }
+        .card_text {
+          color: #ccb07e;
+          font-size: 20px;
+          padding: 5% 15% ;
+          // margin: auto;
+        }
 
-      .card_link {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        &:hover {
-          .line-T {
-            &::before {
-              transform: scaleX(1);
-              transform-origin: right;
+        .card_link {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding-bottom: 5%;
+          &:hover {
+            .line-T {
+              &::before {
+                transform: scaleX(1);
+                transform-origin: right;
+              }
+            }
+            .line-B {
+              &::before {
+                transform: scaleX(1);
+                transform-origin: left;
+              }
             }
           }
-          .line-B {
+
+          .line-T {
+            height: 2px;
+            width: 70px;
+            background-color: rgba(0, 0, 0, 0.2);
             &::before {
-              transform: scaleX(1);
+              content: "";
+              display: block;
+              width: 100%;
+              height: 100%;
+              background-color: #ccb07e;
+              transform: scaleX(0);
+              transition: transform 0.3s;
               transform-origin: left;
             }
           }
-        }
-
-        .line-T {
-          height: 2px;
-          width: 70px;
-          background-color: rgba(0, 0, 0, 0.2);
-          &::before {
-            content: "";
-            display: block;
-            width: 100%;
-            height: 100%;
-            background-color: #270501;
-            transform: scaleX(0);
-            transition: transform 0.3s;
-            transform-origin: left;
+          div {
+            color: #ccb07e;
+            font-size: 20px;
           }
-        }
-        div {
-          color: #270501;
-          font-size: 20px;
-        }
-        .line-B {
-          height: 2px;
-          width: 70px;
-          background-color: rgba(0, 0, 0, 0.2);
-          &::before {
-            content: "";
-            display: block;
-            width: 100%;
-            height: 100%;
-            background-color: #270501;
-            transform: scaleX(0);
-            transition: transform 0.3s;
-            transform-origin: right;
+          .line-B {
+            height: 2px;
+            width: 70px;
+            background-color: rgba(0, 0, 0, 0.2);
+            &::before {
+              content: "";
+              display: block;
+              width: 100%;
+              height: 100%;
+              background-color: #ccb07e;
+              transform: scaleX(0);
+              transition: transform 0.3s;
+              transform-origin: right;
+            }
           }
         }
       }
