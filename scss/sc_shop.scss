@@ -85,7 +85,7 @@ body {
             align-self: center;
             font-size: 30px;
             @media (max-width: 1200px) {
-            padding: 3% 0 0;
+              padding: 3% 0 0;
             }
           }
           li {
@@ -380,7 +380,9 @@ body {
 
   footer {
     width: 100%;
-    background-color: #454d39;
+    background-image: url(/img/SVG/footer-background.svg);
+    background-position: center;
+    background-size: cover;
     padding: 3% 20%;
     .footer_top {
       width: 100%;

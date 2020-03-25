@@ -387,7 +387,9 @@ body {
 
   footer {
     width: 100%;
-    background-color: #AAB2A2;
+    background-image: url(/img/SVG/footer-background.svg);
+    background-size: cover;
+    background-position: center;
     padding: 3% 20%;
     .footer_top {
       width: 100%;

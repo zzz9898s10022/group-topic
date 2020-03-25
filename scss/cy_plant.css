@@ -522,7 +522,9 @@ body .card_desk .card .card_link .line-B::before {
 
 body footer {
   width: 100%;
-  background-color: #AAB2A2;
+  background-image: url(/img/SVG/footer-background.svg);
+  background-size: cover;
+  background-position: center;
   padding: 3% 20%;
 }
 
