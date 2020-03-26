@@ -16,56 +16,6 @@ body {
   }
   // ------------------------------
   header {
-    // .navbar {
-    //   background-color: #414141;
-    //   .nav_container {
-    //     position: relative;
-    //     svg {
-    //       width: 30px;
-    //       fill: white;
-    //       display: none;
-    //       @media (max-width: 1000px) {
-    //         display: block;
-    //         content: "";
-    //         position: absolute;
-    //         // transform: translate(0, -50%);
-    //         right:0;
-    //         top: 0;
-    //       }
-    //     }
-    //     @media (max-width: 1000px) {
-    //       display: flex;
-    //       justify-content: center;
-    //     }
-    //     .nav-item {
-    //       @media (max-width: 1000px) {
-    //         display: none;
-    //       }
-    //     }
-    //     a {
-    //       font-size: 30px;
-    //       color: white;
-    //       transition: 0.5s;
-
-    //       @media (max-width: 960px) {
-    //         font-size: 20px;
-    //       }
-    //       @media (max-width: 768px) {
-    //         font-size: 16px;
-    //       }
-    //       // @media (max-width: 650px) {
-    //       //   font-size: 16px;
-    //       // }
-    //       &:hover {
-    //         color: #806029;
-    //       }
-    //       .cy_logo {
-    //         padding: 15% 0;
-    //         width: 100%;
-    //       }
-    //     }
-    //   }
-    // }
 
     .banner {
       height: 1080px;
@@ -267,7 +217,7 @@ body {
     }
     .sec_position_btm {
       width: 100%;
-      min-height: 60vh;
+      min-height: 100vh;
       color: #ffbf52;
       position: absolute;
       top: 20vh;
@@ -279,7 +229,7 @@ body {
           &:nth-child(1) {
             padding: 65px 30px 30px 150px;
             @media (max-width: 1200px) {
-              padding: 65px 0 0 35px;
+              padding: 65px 65px 0 35px;
             }
             p,
             span {
@@ -288,29 +238,38 @@ body {
           }
         }
         .sec_position_btm_list_photo {
-          position: absolute;
-          top: 50%;
-          z-index: 3;
-          transform: translate(-80%, -50%);
+          width: 100%;
+          // position: relative;
+          // top: 50%;
+          // z-index: 3;
+          // transform: translate(-80%, -50%);
           padding: unset;
           @media (max-width: 1200px) {
-            position: unset;
-            padding-top: 65px;
-            transform: translate(-25%, 0);
-            width: 300px;
+            // position: unset;
+            // padding-top: 65px;
+            // top: 2600px;
+            // transform: translate(25%, 0);
+            // width: 300px;
+            transform: unset;
+            top: unset;
           }
-          @media (max-width: 960px) {
+          @media (max-width: 990px) {
             transform: translate(-5%, 0);
             width: 300px;
           }
           img {
-            width: 320px;
-            height: 320px;
+            width: 540px;
+            height: 540px;
+            position: absolute;
             @media (max-width: 1200px) {
               width: 250px;
               height: 250px;
+              position: relative;
+              top: 120px;
+              transform: translate(0%, 0);
+              width: 300px;
             }
-            @media (max-width: 960px) {
+            @media (max-width: 990px) {
               width: 200px;
               height: 200px;
             }
@@ -351,27 +310,27 @@ body {
       }
     }
     // 今天利用bootstrap的container去切齊邊線，因為bootstrap本身有padding，所以採用::before方式蓋掉原本的圖案，解決固有padding問題
-    .sec_position_top {
-      width: 25vw;
-      max-width: 320px;
-      min-width: 250px;
-      height: 25vw;
-      max-height: 320px;
-      min-height: 250px;
-      padding: 1% 0;
-      position: absolute;
-      top: 20%;
-      left: 10%;
-      align-items: center;
-      z-index: 2;
-      img {
-        width: 100%;
-        height: 100%;
-      }
-      @media (max-width: 1200px) {
-        visibility: hidden;
-      }
-    }
+    // .sec_position_top {
+    //   width: 25vw;
+    //   max-width: 320px;
+    //   min-width: 250px;
+    //   height: 25vw;
+    //   max-height: 320px;
+    //   min-height: 250px;
+    //   padding: 1% 0;
+    //   position: absolute;
+    //   top: 20%;
+    //   left: 10%;
+    //   align-items: center;
+    //   z-index: 2;
+    //   img {
+    //     width: 100%;
+    //     height: 100%;
+    //   }
+    //   @media (max-width: 1200px) {
+    //     visibility: hidden;
+    //   }
+    // }
     // .sec_background_btm {
     //   align-self: flex-end;
     //   width: 100%;
