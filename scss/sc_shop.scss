@@ -16,70 +16,124 @@ body {
   }
   // ------------------------------
   header {
-    .navbar {
-      background-color: #414141;
-      .nav_container {
-        position: relative;
+    // .navbar {
+    //   background-color: #414141;
+    //   .nav_container {
+    //     position: relative;
+    //     svg {
+    //       width: 30px;
+    //       fill: white;
+    //       display: none;
+    //       @media (max-width: 1000px) {
+    //         display: block;
+    //         content: "";
+    //         position: absolute;
+    //         // transform: translate(0, -50%);
+    //         right:0;
+    //         top: 0;
+    //       }
+    //     }
+    //     @media (max-width: 1000px) {
+    //       display: flex;
+    //       justify-content: center;
+    //     }
+    //     .nav-item {
+    //       @media (max-width: 1000px) {
+    //         display: none;
+    //       }
+    //     }
+    //     a {
+    //       font-size: 30px;
+    //       color: white;
+    //       transition: 0.5s;
+
+    //       @media (max-width: 960px) {
+    //         font-size: 20px;
+    //       }
+    //       @media (max-width: 768px) {
+    //         font-size: 16px;
+    //       }
+    //       // @media (max-width: 650px) {
+    //       //   font-size: 16px;
+    //       // }
+    //       &:hover {
+    //         color: #806029;
+    //       }
+    //       .cy_logo {
+    //         padding: 15% 0;
+    //         width: 100%;
+    //       }
+    //     }
+    //   }
+    // }
+
+    .banner {
+      height: 1080px;
+      background-image: url(../img/sc_shop/banner_light.png);
+      background-size: cover;
+      background-position: center;
+      // padding: 5%;
+      display: flex;
+      align-items: center;
+      .navbar {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         svg {
-          width: 30px;
+          width: 40px;
           fill: white;
           display: none;
           @media (max-width: 1000px) {
             display: block;
-            content: "";
+            // align-self: flex-end;
             position: absolute;
-            // transform: translate(0, -50%);
-            right:0;
             top: 0;
+            right: 0;
+            transform: translate(-10px, 10px);
           }
         }
-        @media (max-width: 1000px) {
-          display: flex;
-          justify-content: center;
-        }
-        .nav-item {
+        .nav_container {
+          height: 300px;
+          li {
+            padding: 0;
+          }
           @media (max-width: 1000px) {
-            display: none;
+            display: flex;
+            justify-content: center;
           }
-        }
-        a {
-          font-size: 30px;
-          color: white;
-          transition: 0.5s;
+          .nav-item {
+            @media (max-width: 1000px) {
+              display: none;
+            }
+          }
+          a {
+            font-size: 30px;
+            color: white;
+            transition: 0.5s;
+            padding: unset;
+            @media (max-width: 960px) {
+              font-size: 20px;
+            }
+            @media (max-width: 768px) {
+              font-size: 16px;
+            }
 
-          @media (max-width: 960px) {
-            font-size: 20px;
-          }
-          @media (max-width: 768px) {
-            font-size: 16px;
-          }
-          // @media (max-width: 650px) {
-          //   font-size: 16px;
-          // }
-          &:hover {
-            color: #806029;
-          }
-          .cy_logo {
-            padding: 15% 0;
-            width: 100%;
+            &:hover {
+              color: #806029;
+            }
+            .cy_logo {
+              // padding: 15% 0;
+              width: 255px;
+            }
           }
         }
       }
-    }
-
-    .banner {
-      height: 80vh;
-      background-image: url(../img/sc_banner.jpg);
-      background-size: cover;
-      background-position: center;
-      padding: 5%;
-      display: flex;
-      align-items: center;
-
       .calendar_container {
-        transform: translate(0, 20%);
         .calendar {
-          width: 50%;
+          width: 570px;
+          transform: translate(0, 195px);
           img {
             width: 100%;
           }
@@ -89,9 +143,10 @@ body {
   }
   .news_container {
     width: 100%;
-    // height: 100vh;
     background-color: #f6d498;
-    // padding: 10% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .news_content {
       width: 100%;
       display: flex;
@@ -100,68 +155,83 @@ body {
 
       .news_title {
         font-size: 30px;
-        padding: 5% 0;
+        padding: 75px 0 52.5px;
       }
-      .news_list {
-        color: #806029;
-        font-size: 20px;
-        border-bottom: 2px #806029 solid;
-        letter-spacing: 10px;
-      }
-    }
-    .news_link {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-size: 20px;
-      padding: 5% 0;
-      &:hover {
-        .line-T {
-          &::before {
-            transform: scaleX(1);
-            transform-origin: right;
-          }
-        }
-        .line-B {
-          &::before {
-            transform: scaleX(1);
-            transform-origin: left;
+      .news_title_btm {
+        width: 100%;
+        .news_inner_content {
+          color: #806029;
+          font-size: 20px;
+          border-bottom: 2px #806029 solid;
+          letter-spacing: 5px;
+
+          cursor: pointer;
+          padding: 22.5px 0;
+          div {
+            &:nth-child(1) {
+              padding-right: 48px;
+            }
+            &:nth-child(3) {
+              margin-left: auto;
+            }
           }
         }
       }
 
-      .line-T {
-        height: 2px;
-        width: 80px;
-        background-color: rgba(0, 0, 0, 0.2);
-        &::before {
-          content: "";
-          display: block;
-          width: 100%;
-          height: 100%;
-          background-color: #270501;
-          transform: scaleX(0);
-          transition: transform 0.3s;
-          transform-origin: left;
-        }
-      }
-      div {
-        color: #270501;
+      .news_link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         font-size: 20px;
-      }
-      .line-B {
-        height: 2px;
-        width: 80px;
-        background-color: rgba(0, 0, 0, 0.2);
-        &::before {
-          content: "";
-          display: block;
-          width: 100%;
-          height: 100%;
-          background-color: #270501;
-          transform: scaleX(0);
-          transition: transform 0.3s;
-          transform-origin: right;
+        padding: 5% 0;
+        &:hover {
+          .line-T {
+            &::before {
+              transform: scaleX(1);
+              transform-origin: right;
+            }
+          }
+          .line-B {
+            &::before {
+              transform: scaleX(1);
+              transform-origin: left;
+            }
+          }
+        }
+
+        .line-T {
+          height: 2px;
+          width: 80px;
+          background-color: rgba(0, 0, 0, 0.2);
+          &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: #270501;
+            transform: scaleX(0);
+            transition: transform 0.3s;
+            transform-origin: left;
+          }
+        }
+        div {
+          color: #270501;
+          font-size: 20px;
+        }
+        .line-B {
+          height: 2px;
+          width: 80px;
+          background-color: rgba(0, 0, 0, 0.2);
+          &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: #270501;
+            transform: scaleX(0);
+            transition: transform 0.3s;
+            transform-origin: right;
+          }
         }
       }
     }
@@ -169,14 +239,14 @@ body {
 
   .sec_background_top {
     width: 100%;
-    height: 50vh;
+    height: 528px;
     @media (max-width: 1200px) {
       margin: unset;
     }
     .product_bg_T {
       width: 100%;
       height: 100%;
-      background-image: url(../img/sc_product_l.jpg);
+      background-image: url(../img/sc_shop/parallax_light_1.png);
       background-size: cover;
       background-position: bottom;
       background-attachment: fixed;
@@ -187,8 +257,7 @@ body {
   }
   .sec_container {
     width: 100%;
-    height: 100vh;
-    // padding: 3% 0;
+    height: 1080px;
     background-color: #f6d498;
     position: relative;
     overflow: hidden;
@@ -214,7 +283,7 @@ body {
             }
             p,
             span {
-              color: #ccb07e;              
+              color: #ccb07e;
             }
           }
         }
@@ -328,14 +397,14 @@ body {
   }
   .sec_background_btm {
     width: 100%;
-    height: 50vh;
+    height: 528px;
     @media (max-width: 1200px) {
       margin: unset;
     }
     .product_bg_B {
       width: 100%;
       height: 100%;
-      background-image: url(../img/sc_product_r.jpg);
+      background-image: url(../img/sc_shop/parallax_light_2.png);
       background-size: cover;
       background-position: top;
       background-attachment: fixed;
@@ -435,22 +504,25 @@ body {
   // }
   .swiper-container {
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #f6d498;
-    .swiper_title{
+    padding-bottom: 150px;
+    .swiper_title {
       font-size: 30px;
       color: #56380c;
-      padding: 3% 0;
+      padding: 75px 0;
+    }
+    .swiper-wrapper{
+      height: unset;
     }
     .swiper-slide {
       text-align: center;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-bottom: 3%;
+      // padding-bottom: 3%;
       .card {
         width: 100%;
         background-color: #56380c;
@@ -463,7 +535,7 @@ body {
         .card_text {
           color: #ccb07e;
           font-size: 20px;
-          padding: 5% 15% ;
+          padding: 5% 15%;
           // margin: auto;
         }
 
@@ -528,9 +600,7 @@ body {
 
   footer {
     width: 100%;
-    background-image: url(/img/SVG/footer-background.svg);
-    background-position: center;
-    background-size: cover;
+  background-color: #414141;
     padding: 3% 20%;
     .footer_top {
       width: 100%;
@@ -554,8 +624,8 @@ body {
         }
         .icon {
           #facebook_icon {
-            stroke: black;
-            stroke-width: 9;
+            stroke: white;
+            stroke-width: 10;
             &:hover {
               stroke: blue;
               fill: blue;
@@ -569,7 +639,7 @@ body {
             #path1,
             #path2,
             #path3 {
-              fill: black;
+              fill: white;
             }
             &:hover {
               transition: 0.3s;
