@@ -21,7 +21,7 @@ body .drop-shadow {
 
 body header .banner {
   height: 1080px;
-  background-image: url(../img/sc_shop/banner_light.png);
+  background-image: url(../img/cy_plant/banner_sun.png);
   background-size: cover;
   background-position: center;
   display: -webkit-box;
@@ -174,7 +174,7 @@ body .news_container .news_content .news_title_btm .news_inner_content {
 }
 
 body .news_container .news_content .news_title_btm .news_inner_content div:nth-child(1) {
-  color: #93B342;
+  color: #93b342;
   padding-right: 48px;
 }
 
@@ -261,6 +261,22 @@ body .news_container .news_content .news_link .line-B::before {
           transform-origin: right;
 }
 
+body .news_container .modal .modal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .news_container .modal .modal-body img {
+  margin-right: 50px;
+}
+
+body .news_container .modal .modal-body .img_describe {
+  width: 160px;
+  background-color: white;
+  color: red;
+}
+
 body .sec_background_top {
   width: 100%;
   height: 528px;
@@ -275,129 +291,53 @@ body .sec_background_top {
 body .sec_background_top .product_bg_T {
   width: 100%;
   height: 100%;
-  background-image: url(../img/cy_plant/parallax_sun_1.svg);
+  background-image: url(../img/cy_plant/parallax_sun_1.png);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
-body .sec_container {
-  width: 100%;
-  height: 1080px;
-  position: relative;
-  overflow-x: hidden;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+body .menu_bg .menuall {
+  height: 100vh;
 }
 
-@media (max-width: 1200px) {
-  body .sec_container {
-    height: unset;
-  }
+body .menu_bg .menuall .menu {
+  padding: 5vh 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20%;
 }
 
-body .sec_container .sec_position_top_hidden {
-  width: 100%;
-  background-color: white;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  visibility: hidden;
-  padding-top: 65px;
+body .menu_bg .menuall .menu .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: seagreen;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
 }
 
-@media (max-width: 1200px) {
-  body .sec_container .sec_position_top_hidden {
-    height: unset;
-    visibility: visible;
-  }
-}
-
-body .sec_container .sec_position_top_hidden .sec_position_top_hidden_title {
-  font-size: 30px;
+body .menu_bg .menuall .menu .text h4 {
   color: #66c302;
-}
-
-body .sec_container .sec_position_top_hidden .sec_position_mid_hidden_title {
-  font-size: 20px;
-  padding: 65px 0;
-  color: #092b00;
-}
-
-body .sec_container .sec_position_top_hidden .sec_position_btm_hidden_content {
-  padding-bottom: 65px;
-  font-size: 20px;
-  color: #270501;
-}
-
-body .sec_container .sec_position_btm {
-  min-height: 810px;
-  position: absolute;
-  top: 10vh;
-  z-index: 1;
-}
-
-body .sec_container .sec_position_btm::before {
-  content: "";
-  max-width: 135%;
-  width: 135%;
-  height: 810px;
-  background-image: url(../img/plant.jpg);
-  background-position: center;
-  background-size: cover;
-  position: absolute;
-  right: 0;
-  z-index: 1;
-}
-
-@media (max-width: 1200px) {
-  body .sec_container .sec_position_btm {
-    width: 100%;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    position: unset;
-  }
-}
-
-body .sec_container .sec_position_top {
-  width: 540px;
-  height: 540px;
-  background-color: #E3E4E8;
-  position: absolute;
-  top: 25%;
-  right: 10%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  z-index: 2;
-  padding: 0 65px;
-}
-
-@media (max-width: 1200px) {
-  body .sec_container .sec_position_top {
-    visibility: hidden;
-  }
-}
-
-body .sec_container .sec_position_top .sec_position_top_title {
   font-size: 30px;
-  color: #66c302;
-  padding-top: 65px;
 }
 
-body .sec_container .sec_position_top .sec_position_top_title2 {
-  font-size: 20px;
-  padding: 65px 0;
+body .menu_bg .menuall .menu .text p {
   color: #092b00;
+  font-size: 20px;
 }
 
-body .sec_container .sec_position_top .sec_position_top_content {
-  -webkit-box-flex: 6;
-      -ms-flex: 6;
-          flex: 6;
-  font-size: 20px;
+body .menu_bg .menuall .menu .text li {
   color: #270501;
+  font-size: 20px;
 }
 
 body .sec_background_btm {
@@ -414,7 +354,7 @@ body .sec_background_btm {
 body .sec_background_btm .product_bg_B {
   width: 100%;
   height: 100%;
-  background-image: url(../img/cy_plant/parallax_sun_2.svg);
+  background-image: url(../img/cy_plant/parallax_sun_2.png);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

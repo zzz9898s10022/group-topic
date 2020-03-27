@@ -51,7 +51,7 @@ body {
   header {
     .banner {
       height: 1080px;
-      background-image: url(../img/sc_shop/banner_light.png);
+      background-image: url(../img/cy_plant/banner_sun.png);
       background-size: cover;
       background-position: center;
       // padding: 5%;
@@ -151,7 +151,7 @@ body {
           padding: 22.5px 0;
           div {
             &:nth-child(1) {
-              color:#93B342 ;
+              color: #93b342;
               padding-right: 48px;
             }
             &:nth-child(3) {
@@ -219,6 +219,19 @@ body {
         }
       }
     }
+    .modal {
+      .modal-body {
+        display: flex;
+        img {
+          margin-right: 50px;
+        }
+        .img_describe {
+          width: 160px;
+          background-color: white;
+          color: red;
+        }
+      }
+    }
   }
   .sec_background_top {
     width: 100%;
@@ -229,150 +242,180 @@ body {
     .product_bg_T {
       width: 100%;
       height: 100%;
-      background-image: url(../img/cy_plant/parallax_sun_1.svg);
+      background-image: url(../img/cy_plant/parallax_sun_1.png);
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
     }
   }
+  .menu_bg {
+    .menuall {
+      height: 100vh;
 
-  .sec_container {
-    width: 100%;
-    height: 1080px;
-    position: relative;
-    overflow-x: hidden;
-    flex-wrap: wrap;
-    @media (max-width: 1200px) {
-      height: unset;
-    }
-    .sec_position_top_hidden {
-      width: 100%;
-      background-color: white;
-      align-items: center;
-      visibility: hidden;
-      padding-top: 65px;
-      @media (max-width: 1200px) {
-        height: unset;
-        visibility: visible;
-      }
-      .sec_position_top_hidden_title {
-        font-size: 30px;
-        color: #66c302;
-      }
-      .sec_position_mid_hidden_title {
-        font-size: 20px;
-        padding:  65px 0;
-        color: #092b00;
-      }
-      .sec_position_btm_hidden_content {
-        padding-bottom:65px;
-        font-size: 20px;
-        color: #270501;
+      .menu {
+        padding: 5vh 0;
+        position: sticky;
+        top: 20%;
 
+        .text {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          background-color: seagreen;
+
+          order: -1;
+          h4 {
+            color: #66c302;
+            font-size: 30px;
+          }
+          p {
+            color: #092b00;
+            font-size: 20px;
+          }
+          li {
+            color: #270501;
+            font-size: 20px;
+          }
+        }
       }
     }
-
-    .sec_position_btm {
-      // width: 100%;
-      min-height: 810px;
-      position: absolute;
-      top: 10vh;
-      z-index: 1;
-      &::before {
-        content: "";
-        max-width: 135%;
-        width: 135%;
-        height: 810px;
-        background-image: url(../img/plant.jpg);
-        background-position: center;
-        background-size: cover;
-        position: absolute;
-        right: 0;
-        z-index: 1;
-      }
-      // &::after {
-      //   content: "";
-      //   max-width: 135%;
-      //   width: 135%;
-      //   height: 30vh;
-      //   position: absolute;
-      //   background-color: #172c14;
-      //   bottom: 10%;
-      //   left: 0;
-      //   z-index: 0;
-      //   @media (max-width: 1200px) {
-      //     display: none;
-      //   }
-      // }
-      @media (max-width: 1200px) {
-        width: 100%;
-        order: 2;
-        position: unset;
-      }
-    }
-    // 今天利用bootstrap的container去切齊邊線，因為bootstrap本身有padding，所以採用::before方式蓋掉原本的圖案，解決固有padding問題
-    .sec_position_top {
-      width: 540px;
-      height: 540px;
-      background-color: #E3E4E8;
-      position: absolute;
-      top: 25%;
-      right: 10%;
-      align-items: center;
-      z-index: 2;
-      padding: 0 65px;
-      @media (max-width: 1200px) {
-        visibility: hidden;
-      }
-      .sec_position_top_title {
-        font-size: 30px;
-        color: #66c302;
-        padding-top: 65px;
-        // @media (max-width: 1440px) {
-        //   font-size: 23px;
-        // }
-      }
-      .sec_position_top_title2 {
-        font-size: 20px;
-        padding: 65px 0;
-        color: #092b00;
-        // @media (max-width: 1440px) {
-        //   font-size: 14px;
-        // }
-      }
-      .sec_position_top_content {
-        flex: 6;
-        font-size: 20px;
-        color: #270501;
-        // @media (max-width: 1280px) {
-        //   font-size: 15px;
-        // }
-      }
-    }
-
-    // .sec_background_btm {
-    //   align-self: flex-end;
-    //   width: 100%;
-    //   height: 30vh;
-    //   position: absolute;
-    //   // right: 0;
-    //   bottom: 12%;
-    //   &::after {
-    //     content: "";
-    //     max-width: 135%;
-    //     width: 135%;
-    //     height: 30vh;
-    //     position: absolute;
-    //     background-color: #172c14;
-    //     bottom: 12%;
-    //     left: 0;
-    //     z-index: 0;
-    //     @media (max-width: 1200px) {
-    //       display: none;
-    //     }
-    //   }
-    // }
   }
+  // .sec_container {
+  //   width: 100%;
+  //   height: 1080px;
+  //   position: relative;
+  //   overflow-x: hidden;
+  //   flex-wrap: wrap;
+  //   @media (max-width: 1200px) {
+  //     height: unset;
+  //   }
+  //   .sec_position_top_hidden {
+  //     width: 100%;
+  //     background-color: white;
+  //     align-items: center;
+  //     visibility: hidden;
+  //     padding-top: 65px;
+  //     @media (max-width: 1200px) {
+  //       height: unset;
+  //       visibility: visible;
+  //     }
+  //     .sec_position_top_hidden_title {
+  //       font-size: 30px;
+  //       color: #66c302;
+  //     }
+  //     .sec_position_mid_hidden_title {
+  //       font-size: 20px;
+  //       padding: 65px 0;
+  //       color: #092b00;
+  //     }
+  //     .sec_position_btm_hidden_content {
+  //       padding-bottom: 65px;
+  //       font-size: 20px;
+  //       color: #270501;
+  //     }
+  //   }
+
+  //   .sec_position_btm {
+  //     // width: 100%;
+  //     min-height: 810px;
+  //     position: absolute;
+  //     top: 10vh;
+  //     z-index: 1;
+  //     &::before {
+  //       content: "";
+  //       max-width: 135%;
+  //       width: 135%;
+  //       height: 810px;
+  //       background-image: url(../img/plant.jpg);
+  //       background-position: center;
+  //       background-size: cover;
+  //       position: absolute;
+  //       right: 0;
+  //       z-index: 1;
+  //     }
+  //     // &::after {
+  //     //   content: "";
+  //     //   max-width: 135%;
+  //     //   width: 135%;
+  //     //   height: 30vh;
+  //     //   position: absolute;
+  //     //   background-color: #172c14;
+  //     //   bottom: 10%;
+  //     //   left: 0;
+  //     //   z-index: 0;
+  //     //   @media (max-width: 1200px) {
+  //     //     display: none;
+  //     //   }
+  //     // }
+  //     @media (max-width: 1200px) {
+  //       width: 100%;
+  //       order: 2;
+  //       position: unset;
+  //     }
+  //   }
+  //   // 今天利用bootstrap的container去切齊邊線，因為bootstrap本身有padding，所以採用::before方式蓋掉原本的圖案，解決固有padding問題
+  //   .sec_position_top {
+  //     width: 540px;
+  //     height: 540px;
+  //     background-color: #e3e4e8;
+  //     position: absolute;
+  //     top: 25%;
+  //     right: 10%;
+  //     align-items: center;
+  //     z-index: 2;
+  //     padding: 0 65px;
+  //     @media (max-width: 1200px) {
+  //       visibility: hidden;
+  //     }
+  //     .sec_position_top_title {
+  //       font-size: 30px;
+  //       color: #66c302;
+  //       padding-top: 65px;
+  //       // @media (max-width: 1440px) {
+  //       //   font-size: 23px;
+  //       // }
+  //     }
+  //     .sec_position_top_title2 {
+  //       font-size: 20px;
+  //       padding: 65px 0;
+  //       color: #092b00;
+  //       // @media (max-width: 1440px) {
+  //       //   font-size: 14px;
+  //       // }
+  //     }
+  //     .sec_position_top_content {
+  //       flex: 6;
+  //       font-size: 20px;
+  //       color: #270501;
+  //       // @media (max-width: 1280px) {
+  //       //   font-size: 15px;
+  //       // }
+  //     }
+  //   }
+
+  //   // .sec_background_btm {
+  //   //   align-self: flex-end;
+  //   //   width: 100%;
+  //   //   height: 30vh;
+  //   //   position: absolute;
+  //   //   // right: 0;
+  //   //   bottom: 12%;
+  //   //   &::after {
+  //   //     content: "";
+  //   //     max-width: 135%;
+  //   //     width: 135%;
+  //   //     height: 30vh;
+  //   //     position: absolute;
+  //   //     background-color: #172c14;
+  //   //     bottom: 12%;
+  //   //     left: 0;
+  //   //     z-index: 0;
+  //   //     @media (max-width: 1200px) {
+  //   //       display: none;
+  //   //     }
+  //   //   }
+  //   // }
+  // }
   .sec_background_btm {
     width: 100%;
     height: 528px;
@@ -382,7 +425,7 @@ body {
     .product_bg_B {
       width: 100%;
       height: 100%;
-      background-image: url(../img/cy_plant/parallax_sun_2.svg);
+      background-image: url(../img/cy_plant/parallax_sun_2.png);
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -399,7 +442,7 @@ body {
       color: #56380c;
       padding: 75px 0;
     }
-    .swiper-wrapper{
+    .swiper-wrapper {
       height: unset;
     }
     .swiper-slide {

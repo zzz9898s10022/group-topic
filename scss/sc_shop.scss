@@ -16,7 +16,6 @@ body {
   }
   // ------------------------------
   header {
-
     .banner {
       height: 1080px;
       background-image: url(../img/sc_shop/banner_light.png);
@@ -205,155 +204,257 @@ body {
   .container-fluid {
     padding: unset;
   }
-  .sec_container {
-    width: 100%;
-    height: 1080px;
+  // .sec_container {
+  //   width: 100%;
+  //   height: 1080px;
+  //   background-color: #f6d498;
+  //   position: relative;
+  //   overflow: hidden;
+  //   flex-wrap: wrap;
+  //   @media (max-width: 1200px) {
+  //     height: unset;
+  //   }
+  //   .sec_position_btm {
+  //     width: 100%;
+  //     min-height: 100vh;
+  //     color: #ffbf52;
+  //     position: absolute;
+  //     top: 20vh;
+  //     z-index: 1;
+  //     .sec_position_btm_list {
+  //       background-color: #56380c;
+  //       position: relative;
+  //       div {
+  //         &:nth-child(1) {
+  //           padding: 65px 30px 30px 150px;
+  //           @media (max-width: 1200px) {
+  //             padding: 65px 65px 0 35px;
+  //           }
+  //           p,
+  //           span {
+  //             color: #ccb07e;
+  //           }
+  //         }
+  //       }
+  //       .sec_position_btm_list_photo {
+  //         width: 100%;
+  //         // position: relative;
+  //         // top: 50%;
+  //         // z-index: 3;
+  //         // transform: translate(-80%, -50%);
+  //         padding: unset;
+  //         @media (max-width: 1200px) {
+  //           // position: unset;
+  //           // padding-top: 65px;
+  //           // top: 2600px;
+  //           // transform: translate(25%, 0);
+  //           // width: 300px;
+  //           transform: unset;
+  //           top: unset;
+  //         }
+  //         @media (max-width: 990px) {
+  //           transform: translate(-5%, 0);
+  //           width: 300px;
+  //         }
+  //         img {
+  //           width: 540px;
+  //           height: 540px;
+  //           position: absolute;
+
+  //           @media (max-width: 1200px) {
+  //             width: 250px;
+  //             height: 250px;
+  //             position: relative;
+  //             top: 120px;
+  //             transform: translate(0%, 0);
+  //             width: 300px;
+  //           }
+  //           @media (max-width: 990px) {
+  //             width: 200px;
+  //             height: 200px;
+  //           }
+  //         }
+  //       }
+  //     }
+
+  //     // @media(max-width:1200px) {
+  //     //   position: relative;
+  //     // }
+  //     // &::before {
+  //     //   content: "";
+  //     //   color: white;
+  //     //   max-width: 135%;
+  //     //   width: 135%;
+  //     //   height: 60vh;
+  //     //   background-color:#414141 ;
+  //     //   position: absolute;
+  //     //   left: 0;
+  //     //   z-index: 1;
+  //     // }
+  //     &::after {
+  //       content: "";
+  //       width: 70%;
+  //       height: 100%;
+  //       position: absolute;
+  //       background-color: #56380c;
+  //       right: 0;
+  //       bottom: 0;
+  //       transform: translate(50%, 0);
+  //       z-index: -1;
+  //     }
+
+  //     @media (max-width: 1200px) {
+  //       width: 100%;
+  //       order: 2;
+  //       position: unset;
+  //     }
+  //   }
+  //   // 今天利用bootstrap的container去切齊邊線，因為bootstrap本身有padding，所以採用::before方式蓋掉原本的圖案，解決固有padding問題
+  //   // .sec_position_top {
+  //   //   width: 25vw;
+  //   //   max-width: 320px;
+  //   //   min-width: 250px;
+  //   //   height: 25vw;
+  //   //   max-height: 320px;
+  //   //   min-height: 250px;
+  //   //   padding: 1% 0;
+  //   //   position: absolute;
+  //   //   top: 20%;
+  //   //   left: 10%;
+  //   //   align-items: center;
+  //   //   z-index: 2;
+  //   //   img {
+  //   //     width: 100%;
+  //   //     height: 100%;
+  //   //   }
+  //   //   @media (max-width: 1200px) {
+  //   //     visibility: hidden;
+  //   //   }
+  //   // }
+  //   // .sec_background_btm {
+  //   //   align-self: flex-end;
+  //   //   width: 100%;
+  //   //   height: 30vh;
+  //   //   position: absolute;
+  //   //   // right: 0;
+  //   //   bottom: 12%;
+  //   //   &::after {
+  //   //     content: "";
+  //   //     max-width: 135%;
+  //   //     width: 135%;
+  //   //     height: 30vh;
+  //   //     position: absolute;
+  //   //     background-color: #c0c8b9;
+  //   //     bottom: 12%;
+  //   //     right: 0;
+  //   //     z-index: 0;
+  //   //     @media (max-width: 1200px) {
+  //   //       display: none;
+  //   //     }
+  //   //   }
+  //   // }
+  // }
+
+  // ----------------------sticky---------------------------------
+  // .menu_bg {
+  //   background-color: #f6d498;
+  //   width: 100%;
+  //   padding: 135px 0;
+  //   .menuall {
+  //     height: 100vh;
+
+  //     .menu {
+  //       padding: 5vh 0;
+  //       position: sticky;
+  //       top: 20%;
+
+  //       .text {
+  //         width: calc(79.8675% - 270px);
+  //         height: 810px;
+  //         display: flex;
+  //         justify-content: center;
+  //         flex-direction: column;
+  //         background-color: #56380c;
+  //         position: relative;
+  //         margin-left: auto;
+  //         padding: 135px 0 135px 270px;
+
+  //         .wrapMenu {
+  //           display: flex;
+  //           height: 300px;
+  //           flex-direction: column;
+  //           flex-wrap: wrap;
+  //         }
+  //         .menu_img {
+  //           position: absolute;
+  //           content: "";
+  //           top: calc(50% - 270px);
+  //           left: -270px;
+  //           width: 540px;
+  //         }
+  //         h4 {
+  //           color: #ffbf52;
+  //           font-size: 30px;
+  //         }
+  //         p {
+  //           color: #ccb07e;
+  //           font-size: 20px;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  //-------------------------------------------------------
+  .menu_bg {
     background-color: #f6d498;
-    position: relative;
-    overflow: hidden;
-    flex-wrap: wrap;
-    @media (max-width: 1200px) {
-      height: unset;
-    }
-    .sec_position_btm {
+    width: 100%;
+    padding: 135px 0;
+    .menu {
       width: 100%;
-      min-height: 100vh;
-      color: #ffbf52;
-      position: absolute;
-      top: 20vh;
-      z-index: 1;
-      .sec_position_btm_list {
-        background-color: #56380c;
+      height: 810px;
+      
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .menuitem {
         position: relative;
-        div {
-          &:nth-child(1) {
-            padding: 65px 30px 30px 150px;
-            @media (max-width: 1200px) {
-              padding: 65px 65px 0 35px;
-            }
-            p,
-            span {
-              color: #ccb07e;
-            }
+        .menu_img {
+          position: absolute;
+          content: "";
+          top: calc(50% - 270px);
+          left: 270px;
+          width: 540px;
+        }
+        .text {
+          width: calc(79.8675% - 270px);
+          height: 810px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          background-color: #56380c;
+          margin-bottom: 75px;
+          margin-left: auto;
+          padding: 135px 0 135px 270px;
+
+          h4 {
+            color: #ffbf52;
+            font-size: 30px;
+          }
+          p {
+            color: #ccb07e;
+            font-size: 20px;
           }
         }
-        .sec_position_btm_list_photo {
-          width: 100%;
-          // position: relative;
-          // top: 50%;
-          // z-index: 3;
-          // transform: translate(-80%, -50%);
-          padding: unset;
-          @media (max-width: 1200px) {
-            // position: unset;
-            // padding-top: 65px;
-            // top: 2600px;
-            // transform: translate(25%, 0);
-            // width: 300px;
-            transform: unset;
-            top: unset;
-          }
-          @media (max-width: 990px) {
-            transform: translate(-5%, 0);
-            width: 300px;
-          }
-          img {
-            width: 540px;
-            height: 540px;
-            position: absolute;
-            @media (max-width: 1200px) {
-              width: 250px;
-              height: 250px;
-              position: relative;
-              top: 120px;
-              transform: translate(0%, 0);
-              width: 300px;
-            }
-            @media (max-width: 990px) {
-              width: 200px;
-              height: 200px;
-            }
-          }
-        }
-      }
-
-      // @media(max-width:1200px) {
-      //   position: relative;
-      // }
-      // &::before {
-      //   content: "";
-      //   color: white;
-      //   max-width: 135%;
-      //   width: 135%;
-      //   height: 60vh;
-      //   background-color:#414141 ;
-      //   position: absolute;
-      //   left: 0;
-      //   z-index: 1;
-      // }
-      &::after {
-        content: "";
-        width: 70%;
-        height: 100%;
-        position: absolute;
-        background-color: #56380c;
-        right: 0;
-        bottom: 0;
-        transform: translate(50%, 0);
-        z-index: -1;
-      }
-
-      @media (max-width: 1200px) {
-        width: 100%;
-        order: 2;
-        position: unset;
       }
     }
-    // 今天利用bootstrap的container去切齊邊線，因為bootstrap本身有padding，所以採用::before方式蓋掉原本的圖案，解決固有padding問題
-    // .sec_position_top {
-    //   width: 25vw;
-    //   max-width: 320px;
-    //   min-width: 250px;
-    //   height: 25vw;
-    //   max-height: 320px;
-    //   min-height: 250px;
-    //   padding: 1% 0;
-    //   position: absolute;
-    //   top: 20%;
-    //   left: 10%;
-    //   align-items: center;
-    //   z-index: 2;
-    //   img {
-    //     width: 100%;
-    //     height: 100%;
-    //   }
-    //   @media (max-width: 1200px) {
-    //     visibility: hidden;
-    //   }
-    // }
-    // .sec_background_btm {
-    //   align-self: flex-end;
-    //   width: 100%;
-    //   height: 30vh;
-    //   position: absolute;
-    //   // right: 0;
-    //   bottom: 12%;
-    //   &::after {
-    //     content: "";
-    //     max-width: 135%;
-    //     width: 135%;
-    //     height: 30vh;
-    //     position: absolute;
-    //     background-color: #c0c8b9;
-    //     bottom: 12%;
-    //     right: 0;
-    //     z-index: 0;
-    //     @media (max-width: 1200px) {
-    //       display: none;
-    //     }
-    //   }
-    // }
   }
+  
+  #inner::-webkit-scrollbar {
+    display: none;
+  }
+
   .sec_background_btm {
     width: 100%;
     height: 528px;
@@ -473,7 +574,7 @@ body {
       color: #56380c;
       padding: 75px 0;
     }
-    .swiper-wrapper{
+    .swiper-wrapper {
       height: unset;
     }
     .swiper-slide {
@@ -559,7 +660,7 @@ body {
 
   footer {
     width: 100%;
-  background-color: #414141;
+    background-color: #414141;
     padding: 3% 20%;
     .footer_top {
       width: 100%;
