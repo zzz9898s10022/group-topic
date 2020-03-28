@@ -53,7 +53,7 @@ body header .banner .navbar svg {
   display: none;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 992px) {
   body header .banner .navbar svg {
     display: block;
     position: absolute;
@@ -72,7 +72,7 @@ body header .banner .navbar .nav_container li {
   padding: 0;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 992px) {
   body header .banner .navbar .nav_container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -83,7 +83,7 @@ body header .banner .navbar .nav_container li {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 992px) {
   body header .banner .navbar .nav_container .nav-item {
     display: none;
   }
@@ -97,20 +97,8 @@ body header .banner .navbar .nav_container a {
   padding: unset;
 }
 
-@media (max-width: 960px) {
-  body header .banner .navbar .nav_container a {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  body header .banner .navbar .nav_container a {
-    font-size: 16px;
-  }
-}
-
 body header .banner .navbar .nav_container a:hover {
-  color: #092b00;
+  color: #806029;
 }
 
 body header .banner .navbar .nav_container a .cy_logo {
@@ -118,17 +106,46 @@ body header .banner .navbar .nav_container a .cy_logo {
 }
 
 body header .banner .calendar_container .calendar {
-  width: 570px;
-  -webkit-transform: translate(0, 195px);
-          transform: translate(0, 195px);
+  width: 50%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media (max-width: 1200px) {
+  body header .banner .calendar_container .calendar {
+    width: 70%;
+  }
+}
+
+@media (max-width: 992px) {
+  body header .banner .calendar_container .calendar {
+    width: 100%;
+  }
 }
 
 body header .banner .calendar_container .calendar img {
   width: 100%;
+  -webkit-transform: translate(0, 195px);
+          transform: translate(0, 195px);
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+body header .banner .calendar_container .calendar img:hover {
+  opacity: 0.8;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body header .banner .calendar_container .calendar img:active {
+  opacity: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 body .news_container {
   width: 100%;
+  background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -138,6 +155,7 @@ body .news_container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: "Noto Sans TC", sans-serif;
 }
 
 body .news_container .news_content {
@@ -157,7 +175,7 @@ body .news_container .news_content {
 body .news_container .news_content .news_title {
   font-size: 30px;
   padding: 75px 0 52.5px;
-  color: #66c302;
+  font-weight: bold;
 }
 
 body .news_container .news_content .news_title_btm {
@@ -165,7 +183,6 @@ body .news_container .news_content .news_title_btm {
 }
 
 body .news_container .news_content .news_title_btm .news_inner_content {
-  color: #092b00;
   font-size: 20px;
   border-bottom: 2px #092b00 solid;
   letter-spacing: 5px;
@@ -174,12 +191,20 @@ body .news_container .news_content .news_title_btm .news_inner_content {
 }
 
 body .news_container .news_content .news_title_btm .news_inner_content div:nth-child(1) {
-  color: #93b342;
   padding-right: 48px;
 }
 
 body .news_container .news_content .news_title_btm .news_inner_content div:nth-child(3) {
   margin-left: auto;
+}
+
+body .news_container .news_content .news_title_btm .news_inner_content .date_style {
+  color: #49804c;
+}
+
+body .news_container .news_content .news_title_btm .news_inner_content .news_list {
+  font-weight: bold;
+  color: #005509;
 }
 
 body .news_container .news_content .news_link {
@@ -195,7 +220,6 @@ body .news_container .news_content .news_link {
           align-items: center;
   font-size: 20px;
   padding: 5% 0;
-  cursor: pointer;
 }
 
 body .news_container .news_content .news_link:hover .line-T::before {
@@ -261,22 +285,6 @@ body .news_container .news_content .news_link .line-B::before {
           transform-origin: right;
 }
 
-body .news_container .modal .modal-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body .news_container .modal .modal-body img {
-  margin-right: 50px;
-}
-
-body .news_container .modal .modal-body .img_describe {
-  width: 160px;
-  background-color: white;
-  color: red;
-}
-
 body .sec_background_top {
   width: 100%;
   height: 528px;
@@ -293,51 +301,162 @@ body .sec_background_top .product_bg_T {
   height: 100%;
   background-image: url(../img/cy_plant/parallax_sun_1.png);
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   background-attachment: fixed;
 }
 
-body .menu_bg .menuall {
-  height: 100vh;
+body .container-fluid {
+  padding: unset;
 }
 
-body .menu_bg .menuall .menu {
-  padding: 5vh 0;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 20%;
+body .menu_bg {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 135px 0;
 }
 
-body .menu_bg .menuall .menu .text {
+body .menu_bg .menu {
+  width: 100%;
+  height: 810px;
+  overflow-y: scroll;
+}
+
+body .menu_bg .menu::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 530px) {
+  body .menu_bg .menu {
+    height: auto;
+    overflow-y: unset;
+  }
+}
+
+body .menu_bg .menu .menuitem {
+  width: 1530px;
+  margin-left: auto;
+  margin-bottom: 75px;
+  position: relative;
+}
+
+@media (max-width: 1530px) {
+  body .menu_bg .menu .menuitem {
+    width: 100%;
+  }
+}
+
+@media (max-width: 530px) {
+  body .menu_bg .menu .menuitem {
+    margin-bottom: 25px;
+  }
+}
+
+body .menu_bg .menu .menuitem .text {
+  background-color: #e3e4e8;
+  position: absolute;
+  bottom: calc(50% - 270px);
+  width: 540px;
+  height: 540px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: seagreen;
-  -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-          order: -1;
+  padding: 0 130px;
 }
 
-body .menu_bg .menuall .menu .text h4 {
+@media (max-width: 1530px) {
+  body .menu_bg .menu .menuitem .text {
+    width: 100%;
+    height: 200px;
+    bottom: calc(50% - 100px);
+    background-color: rgba(227, 228, 232, 0.8);
+  }
+}
+
+@media (max-width: 1530px) and (max-width: 530px) {
+  body .menu_bg .menu .menuitem .text {
+    position: unset;
+    height: auto;
+    padding: 0 50px;
+  }
+  body .menu_bg .menu .menuitem .text:hover {
+    background-image: url(../img/cy_plant/desing_sun_1.png);
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+  }
+}
+
+body .menu_bg .menu .menuitem .text h4 {
   color: #66c302;
   font-size: 30px;
+  padding-top: 10px;
 }
 
-body .menu_bg .menuall .menu .text p {
+@media (max-width: 1530px) {
+  body .menu_bg .menu .menuitem .text h4 {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 902px) {
+  body .menu_bg .menu .menuitem .text h4 {
+    font-size: 20px;
+  }
+}
+
+body .menu_bg .menu .menuitem .text p {
   color: #092b00;
   font-size: 20px;
+  padding-top: 10px;
+  margin: 0;
 }
 
-body .menu_bg .menuall .menu .text li {
+@media (max-width: 902px) {
+  body .menu_bg .menu .menuitem .text p {
+    font-size: 12px;
+  }
+}
+
+body .menu_bg .menu .menuitem .text .wrapMenu p {
+  margin: 0;
+  padding: 10px 0;
   color: #270501;
-  font-size: 20px;
+  -ms-flex-item-align: unset;
+      -ms-grid-row-align: unset;
+      align-self: unset;
+}
+
+@media (max-width: 902px) {
+  body .menu_bg .menu .menuitem .text .wrapMenu p {
+    font-size: 12px;
+  }
+}
+
+body .menu_bg .menu .menuitem .menu_img {
+  width: calc(100% - 270px);
+  margin-left: auto;
+}
+
+@media (max-width: 1530px) {
+  body .menu_bg .menu .menuitem .menu_img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 530px) {
+  body .menu_bg .menu .menuitem .menu_img {
+    display: none;
+  }
 }
 
 body .sec_background_btm {
@@ -356,7 +475,7 @@ body .sec_background_btm .product_bg_B {
   height: 100%;
   background-image: url(../img/cy_plant/parallax_sun_2.png);
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-attachment: fixed;
 }
 
@@ -372,6 +491,7 @@ body .swiper-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #ffffff;
   padding-bottom: 150px;
 }
 
@@ -400,8 +520,7 @@ body .swiper-container .swiper-slide {
 
 body .swiper-container .swiper-slide .card {
   width: 100%;
-  border: 2px black solid;
-  border-radius: 2%;
+  background-color: #e3e4e8;
 }
 
 body .swiper-container .swiper-slide .card .card_title {
@@ -532,7 +651,7 @@ body footer .footer_top .adress li {
 
 body footer .footer_top .adress .icon #facebook_icon {
   stroke: white;
-  stroke-width: 9;
+  stroke-width: 10;
 }
 
 body footer .footer_top .adress .icon #facebook_icon:hover {

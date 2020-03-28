@@ -107,10 +107,8 @@ body header .banner .navbar .nav_container a .cy_logo {
 
 body header .banner .calendar_container .calendar {
   width: 50%;
-  opacity: 0.4;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  cursor: pointer;
 }
 
 @media (max-width: 1200px) {
@@ -125,22 +123,24 @@ body header .banner .calendar_container .calendar {
   }
 }
 
-body header .banner .calendar_container .calendar:hover {
+body header .banner .calendar_container .calendar img {
+  width: 100%;
+  -webkit-transform: translate(0, 195px);
+          transform: translate(0, 195px);
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+body header .banner .calendar_container .calendar img:hover {
   opacity: 0.8;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-body header .banner .calendar_container .calendar:active {
+body header .banner .calendar_container .calendar img:active {
   opacity: 1;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-}
-
-body header .banner .calendar_container .calendar img {
-  width: 100%;
-  -webkit-transform: translate(0, 195px);
-          transform: translate(0, 195px);
 }
 
 body .news_container {

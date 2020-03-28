@@ -80,26 +80,29 @@ body {
       .calendar_container {
         .calendar {
           width: 50%;
-          opacity: 0.4;
+          
           transition: 0.3s;
-          cursor: pointer;
+          
           @media (max-width: 1200px) {
             width: 70%;
           }
           @media (max-width: 992px) {
             width: 100%;
           }
-          &:hover {
-            opacity: 0.8;
-            transition: 0.3s;
-          }
-          &:active {
-            opacity: 1;
-            transition: 0.3s;
-          }
+         
           img {
             width: 100%;
             transform: translate(0, 195px);
+            opacity: 0.4;
+            cursor: pointer;
+            &:hover {
+              opacity: 0.8;
+              transition: 0.3s;
+            }
+            &:active {
+              opacity: 1;
+              transition: 0.3s;
+            }
           }
         }
       }
