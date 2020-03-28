@@ -600,7 +600,7 @@
         var swiper = new Swiper('.swiper-container', {
             slidesPerView: 3,
             centeredSlides: true,
-            spaceBetween: 70,
+            spaceBetween: 20,
             grabCursor: true,
             pagination: {
                 el: '.swiper-pagination',
@@ -610,13 +610,20 @@
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
+
             autoplay: {
                 delay: 3500,
                 disableOnInteraction: false,
             },
+            breakpoints: {
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+            }
         });
         // swiper
-        
+
         window.onscroll = function () {
             console.log(document.documentElement.scrollTop);
         }
