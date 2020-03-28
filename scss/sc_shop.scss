@@ -1,3 +1,9 @@
+//  bootstrap
+//     --breakpoint-sm: 576px;
+//     --breakpoint-md: 768px;
+//     --breakpoint-lg: 992px;
+//     --breakpoint-xl: 1200px;
+
 html {
   scroll-behavior: smooth;
 }
@@ -34,7 +40,7 @@ body {
           width: 40px;
           fill: white;
           display: none;
-          @media (max-width: 1000px) {
+          @media (max-width: 992px) {
             display: block;
             // align-self: flex-end;
             position: absolute;
@@ -48,12 +54,12 @@ body {
           li {
             padding: 0;
           }
-          @media (max-width: 1000px) {
+          @media (max-width: 992px) {
             display: flex;
             justify-content: center;
           }
           .nav-item {
-            @media (max-width: 1000px) {
+            @media (max-width: 992px) {
               display: none;
             }
           }
@@ -62,13 +68,6 @@ body {
             color: white;
             transition: 0.5s;
             padding: unset;
-            @media (max-width: 960px) {
-              font-size: 20px;
-            }
-            @media (max-width: 768px) {
-              font-size: 16px;
-            }
-
             &:hover {
               color: #806029;
             }
@@ -80,13 +79,15 @@ body {
       }
       .calendar_container {
         .calendar {
-          width: 570px;
-          transform: translate(0, 195px);
+          width: 50%;
           opacity: 0.4;
           transition: 0.3s;
           cursor: pointer;
-          @media (max-width: 1000px) {
-            margin: 0 auto;
+          @media (max-width: 1200px) {
+            width: 70%;
+          }
+          @media (max-width: 992px) {
+            width: 100%;
           }
           &:hover {
             opacity: 0.8;
@@ -97,6 +98,8 @@ body {
             transition: 0.3s;
           }
           img {
+            width: 100%;
+            transform: translate(0, 195px);
           }
         }
       }
@@ -125,15 +128,28 @@ body {
           font-size: 20px;
           border-bottom: 2px #806029 solid;
           letter-spacing: 5px;
-
           cursor: pointer;
           padding: 22.5px 0;
+          @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+          }
           div {
             &:nth-child(1) {
               padding-right: 48px;
             }
             &:nth-child(3) {
               margin-left: auto;
+            }
+            @media (max-width: 768px) {
+              &:nth-child(1) {
+                padding-right: 0;
+                margin-bottom: 10px;
+              }
+              &:nth-child(3) {
+                margin-left: unset;
+                display: none;
+              }
             }
           }
         }
@@ -459,16 +475,6 @@ body {
           margin-bottom: 75px;
           margin-left: auto;
           padding: 135px 0 135px 270px;
-          @media (max-width: 1100px) {
-            width: 100%;
-            height: 500px;
-          }
-          .wrapMenu {
-            display: flex;
-            height: 400px;
-            flex-direction: column;
-            flex-wrap: wrap;
-          }
 
           h4 {
             color: #ffbf52;
@@ -477,6 +483,28 @@ body {
           p {
             color: #ccb07e;
             font-size: 20px;
+          }
+          @media (max-width: 1100px) {
+            width: 100%;
+            height: 600px;
+            padding: unset;
+            h4,
+            p {
+              align-self: center;
+            }
+          }
+
+          .wrapMenu {
+            display: flex;
+            height: 400px;
+            flex-direction: column;
+            flex-wrap: wrap;
+            p {
+              align-self: unset;
+              @media (max-width: 1100px) {
+                align-self: center;
+              }
+            }
           }
         }
       }
