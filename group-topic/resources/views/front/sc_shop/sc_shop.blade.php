@@ -19,7 +19,7 @@
 
     @endsection
 
-<body>
+
 
 @section('content')
 
